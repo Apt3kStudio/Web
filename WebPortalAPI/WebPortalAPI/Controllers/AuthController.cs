@@ -6,8 +6,11 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using WebPortalAPI.Data;
+using WebPortalAPI.Models;
 
 namespace WebPortalAPI.Controllers
 {
@@ -15,9 +18,64 @@ namespace WebPortalAPI.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private UserManager<ApplicationUser> userManager;
+        public AuthController(UserManager<ApplicationUser> userManager)
+        {
+            this.userManager = userManager;
+        }
+[HttpPost]
+[Route("login")]
+        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        {
+            var user = await userManager.FindByEmailAsync(model.Username);
+
+            if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
+            {
+
+                #region  security key 
+                string securityKey = "super_long_security_key";
+                #endregion
+
+                #region Symetric security key
+                var symetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
+                #endregion
+
+                #region signing credential 
+                var signingCredentials = new SigningCredentials(symetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
+                #endregion
+
+                #region Claims 
+                var claims = new List<Claim>();
+                //claims.Add(new Claim(ClaimTypes.Role, "Admin"));
+                claims.Add(new Claim("Custom_Claim", "Custom_Claim_Name"));
+                claims.Add(new Claim(ClaimTypes.Role, "PhoneAppUser"));
+                #endregion
+
+                #region create token
+                var token = new JwtSecurityToken(
+                     issuer: "phoneapp",
+                     audience: "phoneappusers",
+                     expires: DateTime.Now.AddHours(1),
+                     signingCredentials: signingCredentials,
+                     claims: claims);
+                #endregion
+
+                return Ok(new
+                {
+                  token = new JwtSecurityTokenHandler().WriteToken(token),
+                    expiration = token.ValidTo 
+                });
+            }
+
+            return Unauthorized();
+        }
+
+
         [HttpPost("token")]
         public ActionResult GetToken()
         {
+           
+
             #region  security key 
             string securityKey = "super_long_security_key";
             #endregion
@@ -39,8 +97,8 @@ namespace WebPortalAPI.Controllers
 
             #region create token
             var token = new JwtSecurityToken(
-                 issuer: "smesk.in",
-                 audience: "readers",
+                 issuer: "phoneapp",
+                 audience: "phoneappusers",
                  expires: DateTime.Now.AddHours(1),
                  signingCredentials: signingCredentials,
                  claims: claims);
