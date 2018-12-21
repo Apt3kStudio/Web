@@ -109,6 +109,8 @@ namespace WebPortalAPI
 
             app.UseAuthentication();
 
+            SeedDatabase.Initialize(app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
