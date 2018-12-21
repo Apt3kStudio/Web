@@ -42,9 +42,16 @@ namespace WebPortalAPI
                     Configuration.GetConnectionString("DefaultConnection")));
             #endregion
             #region Add default identity user
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddDefaultIdentity<IdentityUser>()
+            // .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                   .AddSignInManager<SignInManager<ApplicationUser>>()
+               .AddEntityFrameworkStores<ApplicationDbContext>();
+              // .AddDefaultTokenProviders();
             #endregion
+            
+            
+            
             #region  security key 
             string securityKey = "super_long_security_key";
             #endregion
