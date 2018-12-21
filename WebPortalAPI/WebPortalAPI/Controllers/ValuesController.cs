@@ -11,15 +11,22 @@ namespace WebPortalAPI.Controllers
 {
     [Route("api/[controller]")]
     [Authorize(Roles ="Admin")]
+    //[Authorize]
     [ApiController]
     public class ValuesController : ControllerBase
     {
         private ApplicationDbContext db;
+        public ValuesController(ApplicationDbContext db)
+        {
+            this.db = db;
+        }
+
         // GET: api/Values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return db.Users.Select(user => user.UserName).ToArray();
+           //return new string[] { "value1", "value2" };
         }
 
         // GET: api/Values/5
