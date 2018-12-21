@@ -59,9 +59,15 @@ namespace WebPortalAPI
             #region Symetric security key
             var symetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
             #endregion
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
                 .AddJwtBearer(options =>
                     {
+                        
                         options.TokenValidationParameters = new TokenValidationParameters
                         {
                             #region what to validate
@@ -69,8 +75,8 @@ namespace WebPortalAPI
                             ValidateAudience = true,
                             ValidateIssuerSigningKey = true,
                             //set up validate data
-                            ValidIssuer = "smesk.in",
-                            ValidAudience = "readers",
+                            ValidIssuer = "phoneapp",
+                            ValidAudience = "phoneappusers",
                             IssuerSigningKey = symetricSecurityKey
                             #endregion
                         };
