@@ -12,5 +12,6 @@ namespace WebPortalAPI.Data
             : base(options)
         {
         }
+
     }
 }
