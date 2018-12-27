@@ -23,11 +23,11 @@ namespace WebPortalAPI.Controllers
         {
             this.userManager = userManager;
         }
-[HttpPost]
-[Route("login")]
+        [HttpPost]
+        [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
-            var user = await userManager.FindByEmailAsync(model.Username);
+            var user = await userManager.FindByEmailAsync(model.Email);
 
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
             {
@@ -65,6 +65,25 @@ namespace WebPortalAPI.Controllers
                   token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo 
                 });
+            }
+
+            return Unauthorized();
+        }
+        [HttpPost]
+        [Route("registration")]
+        public async Task<IActionResult> Register([FromBody] LoginModel model)
+        {
+
+
+            var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+            var result = await userManager.CreateAsync(user, model.Password);
+
+
+            var getuser = await userManager.FindByEmailAsync(model.Email);
+
+            if (getuser != null && await userManager.CheckPasswordAsync(getuser, model.Password))
+            {
+                return Ok("User got created.");
             }
 
             return Unauthorized();

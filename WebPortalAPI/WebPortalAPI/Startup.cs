@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore;
 
 namespace WebPortalAPI
 {
@@ -47,11 +48,11 @@ namespace WebPortalAPI
             services.AddIdentity<ApplicationUser, IdentityRole>()
                    .AddSignInManager<SignInManager<ApplicationUser>>()
                .AddEntityFrameworkStores<ApplicationDbContext>();
-              // .AddDefaultTokenProviders();
+            // .AddDefaultTokenProviders();
             #endregion
-            
-            
-            
+
+
+
             #region  security key 
             string securityKey = "super_long_security_key";
             #endregion
@@ -67,7 +68,7 @@ namespace WebPortalAPI
                 })
                 .AddJwtBearer(options =>
                     {
-                        
+
                         options.TokenValidationParameters = new TokenValidationParameters
                         {
                             #region what to validate
@@ -118,5 +119,6 @@ namespace WebPortalAPI
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
     }
 }
