@@ -12,7 +12,18 @@ namespace WebPortalAPI.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            ViewData["Title"] = "";
+            PushNotification pn = new PushNotification();
+            return View(pn);
+        }
+        [HttpPost]
+        public IActionResult Index(PushNotification model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+                
+            model.SendPushNotification(model);
+            return View(new PushNotification());
         }
 
         public IActionResult About()

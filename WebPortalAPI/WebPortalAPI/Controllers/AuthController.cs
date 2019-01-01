@@ -109,7 +109,7 @@ namespace WebPortalAPI.Controllers
 
             #region Claims 
             var claims = new List<Claim>();
-            //claims.Add(new Claim(ClaimTypes.Role, "Admin"));
+            claims.Add(new Claim(ClaimTypes.Role, "Admin"));
             claims.Add(new Claim("Custom_Claim", "Custom_Claim_Name"));
             claims.Add(new Claim(ClaimTypes.Role, "PhoneAppUser"));
             #endregion

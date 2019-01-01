@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using WebPortalAPI.Data;
+using WebPortalAPI.Models;
 
 namespace WebPortalAPI.Controllers
 {
@@ -15,6 +21,8 @@ namespace WebPortalAPI.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+       
+        
         private ApplicationDbContext db;
         public ValuesController(ApplicationDbContext db)
         {
@@ -23,11 +31,25 @@ namespace WebPortalAPI.Controllers
 
         // GET: api/Values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<string>> GetAsync()
         {
+            try
+            {
+                PushNotification pn = new PushNotification();
+                pn.SendPushNotification(new PushNotification() { NotificationTitle = "", NotificationContent = "" });
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
             return db.Users.Select(user => user.UserName).ToArray();
-           //return new string[] { "value1", "value2" };
+            //return new string[] { "value1", "value2" };
         }
+
+        
 
         // GET: api/Values/5
         [HttpGet("{id}", Name = "Get")]
@@ -53,5 +75,8 @@ namespace WebPortalAPI.Controllers
         public void Delete(int id)
         {
         }
-    }
+
+     
+}
+  
 }
