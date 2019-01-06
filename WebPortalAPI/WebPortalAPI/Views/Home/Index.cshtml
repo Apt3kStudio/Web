@@ -3,7 +3,10 @@
 @{ 
     ViewData["Title"] = "Send Notification";
 }
+
 <h2>@ViewData["Title"]</h2>
+@*@if(User.IsInRole("admin"))*@
+        @*{*@
 <div class="row">
     <div class="col-md-4">
         <section>
@@ -28,3 +31,4 @@
         </section>
     </div>
 </div>
+@*}*@

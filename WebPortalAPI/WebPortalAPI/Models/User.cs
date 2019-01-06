@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace WebPortalAPI.Models
 {
-    public class LoginModel
+    public class User
     {
         [Required(ErrorMessage ="Username is required.")]
         public string Email { get; set; }
         [Required(ErrorMessage ="Password is Required.")]
         public string Password { get; set; }
+        public string roleName { get; set; }
 
     }
 }

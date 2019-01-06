@@ -3,13 +3,27 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using WebPortalAPI.Data;
 using WebPortalAPI.Models;
 
 namespace WebPortalAPI.Controllers
 {
+    
     public class HomeController : Controller
     {
+        private UserManager<ApplicationUser> userManager;
+        private RoleManager<ApplicationRole> roleManager;
+
+        public HomeController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager)
+        {
+            this.roleManager = roleManager;
+            this.userManager = userManager;
+        }
+
         public IActionResult Index()
         {
             ViewData["Title"] = "";
@@ -22,6 +36,37 @@ namespace WebPortalAPI.Controllers
             if (!ModelState.IsValid)
                 return View(model);
                 
+            model.SendPushNotification(model);
+            return View(new PushNotification());
+        }
+        [Authorize]
+        public IActionResult UsersAcount()
+        {
+            ViewData["Title"] = "";
+            UtilityWorker uWorker = new UtilityWorker(roleManager, userManager);
+             uWorker.AddNewRoleAsync("admin").Wait();
+             uWorker.AddNewRoleAsync("regular").Wait();
+            ManagerAccounts mua = new ManagerAccounts();
+            mua.AppRoles = uWorker.getRoles();
+            mua.AppUserEmails = uWorker.getAppUsers();
+            mua.getRolesForDropDownList = uWorker.getRolesForDropDownList();
+            uWorker.initializedAllUsers(mua);
+            return View(mua);
+        }
+        [HttpPost]
+        public  IActionResult AddUserToRole(ManagerAccounts model)
+        {
+            UtilityWorker utility = new UtilityWorker(roleManager,userManager);
+            ApplicationUser user = userManager.FindByEmailAsync(model.user.Email).Result;
+            utility.AddUserToRole(user, model.user.roleName).Wait();
+            return Redirect("UsersAcount");
+        }
+        [HttpPost]
+        public IActionResult UsersAcount(PushNotification model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
@@ -50,5 +95,6 @@ namespace WebPortalAPI.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+       
     }
 }

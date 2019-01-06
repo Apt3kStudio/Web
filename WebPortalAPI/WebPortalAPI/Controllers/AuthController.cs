@@ -25,7 +25,7 @@ namespace WebPortalAPI.Controllers
         }
         [HttpPost]
         [Route("login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        public async Task<IActionResult> Login([FromBody] User model)
         {
             var user = await userManager.FindByEmailAsync(model.Email);
 
@@ -71,7 +71,7 @@ namespace WebPortalAPI.Controllers
         }
         [HttpPost]
         [Route("registration")]
-        public async Task<IActionResult> Register([FromBody] LoginModel model)
+        public async Task<IActionResult> Register([FromBody] User model)
         {
 
 

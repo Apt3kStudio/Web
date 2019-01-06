@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace WebPortalAPI
 {
@@ -36,6 +37,7 @@ namespace WebPortalAPI
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+                
             });
             #region Add db context to the service  
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -45,12 +47,11 @@ namespace WebPortalAPI
             #region Add default identity user
             //services.AddDefaultIdentity<IdentityUser>()
             // .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
                    .AddSignInManager<SignInManager<ApplicationUser>>()
                .AddEntityFrameworkStores<ApplicationDbContext>();
-            // .AddDefaultTokenProviders();
+             //.AddDefaultTokenProviders();
             #endregion
-
 
 
             #region  security key 
@@ -60,28 +61,30 @@ namespace WebPortalAPI
             #region Symetric security key
             var symetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
             #endregion
-            services.AddAuthentication(options =>
+            services.AddAuthentication(
+                //options => //Not working: Figure out why
+                //{
+                //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                //    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                //}
+                ).AddCookie(cfg => cfg.SlidingExpiration = true)
+            .AddJwtBearer(options =>
                 {
-                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                })
-                .AddJwtBearer(options =>
-                    {
 
-                        options.TokenValidationParameters = new TokenValidationParameters
-                        {
-                            #region what to validate
-                            ValidateIssuer = true,
-                            ValidateAudience = true,
-                            ValidateIssuerSigningKey = true,
-                            //set up validate data
-                            ValidIssuer = "phoneapp",
-                            ValidAudience = "phoneappusers",
-                            IssuerSigningKey = symetricSecurityKey
-                            #endregion
-                        };
-                    });
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        #region what to validate
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateIssuerSigningKey = true,
+                        //set up validate data
+                        ValidIssuer = "phoneapp",
+                        ValidAudience = "phoneappusers",
+                        IssuerSigningKey = symetricSecurityKey
+                        #endregion
+                    };
+                });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
@@ -91,7 +94,11 @@ namespace WebPortalAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(  IApplicationBuilder app, 
+                                IHostingEnvironment env, 
+                                ApplicationDbContext context, 
+                                RoleManager<ApplicationRole> roleManager, 
+                                UserManager<ApplicationUser> userManager)
         {
             if (env.IsDevelopment())
             {
@@ -103,10 +110,10 @@ namespace WebPortalAPI
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+        
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            //app.UseCookiePolicy();
 
             app.UseAuthentication();
 
