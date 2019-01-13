@@ -64,7 +64,7 @@ namespace WebPortalAPI.Models
             bool roleExist = await roleManager.RoleExistsAsync(roleName);
             if (roleExist)
             {
-                var result1 = await userManager.RemoveFromRoleAsync(appUser, roleName);
+                var result1 = await userManager.RemoveFromRolesAsync(appUser, userManager.GetRolesAsync(appUser).Result.ToList());
             }
         }
 

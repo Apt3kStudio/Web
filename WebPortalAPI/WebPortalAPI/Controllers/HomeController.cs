@@ -39,6 +39,21 @@ namespace WebPortalAPI.Controllers
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
+        public IActionResult Notification()
+        {
+            ViewData["Title"] = "";
+            PushNotification pn = new PushNotification();
+            return View(pn);
+        }
+        [HttpPost]
+        public IActionResult Notification(PushNotification model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            model.SendPushNotification(model);
+            return View(new PushNotification());
+        }
         [Authorize]
         public IActionResult UsersAcount()
         {

@@ -2,35 +2,38 @@
 @{
     ViewData["Title"] = "UsersAcount";
 }
-<div class="row">
-    <div class="col-sm-12">
-        <h2>Manage User</h2>
-        <hr />
-        <br />
+@*@if (User.IsInRole("admin"))
+{*@
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Manage User</h2>
+            <hr />
+            <br />
+        </div>
     </div>
-</div>
-@foreach (User user in Model.users)
-{
+    @foreach (User user in Model.users)
+    {
 
-    <div class="row UserAccount-Row">
-        <div class="col-sm-4">
-            @user.Email
+        <div class="row UserAccount-Row">
+            <div class="col-sm-4">
+                @user.Email
+            </div>
+            <div class="col-sm-8">
+                <section>
+                    <form method="post" asp-action="AddUserToRole">
+                        <input asp-for="user.Email" type="hidden" value="@user.Email" />
+                        <div class="col-sm-8">
+                            <select asp-for="@user.roleName" class="form-control" asp-items="Model.getRolesForDropDownList">
+                                <option>Select User Type</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-success">Save</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
         </div>
-        <div class="col-sm-8">
-            <section>
-                <form method="post" asp-action="AddUserToRole">
-                    <input asp-for="user.Email" type="hidden" value="@user.Email" />
-                    <div class="col-sm-8">
-                        <select asp-for="@user.roleName" class="form-control" asp-items="Model.getRolesForDropDownList">
-                            <option>Select User Type</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-4">
-                        <button type="submit" class="btn btn-success">Save</button>
-                    </div>
-                </form>
-            </section>
-        </div>
-    </div>
-}
+    }
+@*}*@
 

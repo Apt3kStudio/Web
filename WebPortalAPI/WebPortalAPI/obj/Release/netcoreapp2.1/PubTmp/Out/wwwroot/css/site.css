@@ -35,3 +35,9 @@ body {
         display: none;
     }
 }
+.UserAccount-Row {
+    min-height: 50px;
+    border: 1px solid #f3f3f3;
+    padding: 10px;
+}
+
