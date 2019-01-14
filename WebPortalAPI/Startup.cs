@@ -37,9 +37,9 @@ namespace WebPortalAPI
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
-                
+
             });
-            #region Add db context to the service  
+            #region Add db context to the service
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -54,7 +54,7 @@ namespace WebPortalAPI
             #endregion
 
 
-            #region  security key 
+            #region  security key
             string securityKey = "super_long_security_key";
             #endregion
 
@@ -94,10 +94,10 @@ namespace WebPortalAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(  IApplicationBuilder app, 
-                                IHostingEnvironment env, 
-                                ApplicationDbContext context, 
-                                RoleManager<ApplicationRole> roleManager, 
+        public void Configure(  IApplicationBuilder app,
+                                IHostingEnvironment env,
+                                ApplicationDbContext context,
+                                RoleManager<ApplicationRole> roleManager,
                                 UserManager<ApplicationUser> userManager)
         {
             if (env.IsDevelopment())
@@ -110,7 +110,7 @@ namespace WebPortalAPI
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-        
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             //app.UseCookiePolicy();
