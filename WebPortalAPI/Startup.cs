@@ -54,7 +54,7 @@ namespace WebPortalAPI
             #endregion
 
 
-            #region  security key
+            #region  security key tag
             string securityKey = "super_long_security_key";
             #endregion
 
