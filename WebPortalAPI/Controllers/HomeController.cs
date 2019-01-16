@@ -35,7 +35,7 @@ namespace WebPortalAPI.Controllers
         {
             if (!ModelState.IsValid)
                 return View(model);
-                
+
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
@@ -54,6 +54,24 @@ namespace WebPortalAPI.Controllers
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
+        public IActionResult SendVibration()
+        {
+            UtilityWorker uWorker = new UtilityWorker(roleManager);
+            ViewData["Title"] = "";
+            PushNotification pn = new PushNotification();
+            pn.getTriggerForDropDownList = uWorker.getTriggerForDropDownList();
+            return View(pn);
+        }
+        [HttpPost]
+        public IActionResult SendVibration(PushNotification model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            model.SendVibration(true);
+            return View(new PushNotification());
+        }
+
         [Authorize]
         public IActionResult UsersAcount()
         {
