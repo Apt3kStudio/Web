@@ -68,14 +68,6 @@ C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\WebPortalAPI\obj\Deb
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CopyComplete
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\UsersAcount.g.cshtml.cs
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Notification.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.deps.json
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.runtimeconfig.json
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.runtimeconfig.dev.json
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.dll
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.pdb
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.Views.dll
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.Views.pdb
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csprojAssemblyReference.cache
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CoreCompileInputs.cache
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorAssemblyInfo.cache
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorAssemblyInfo.cs
@@ -124,6 +116,7 @@ C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcore
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Notification.g.cshtml.cs
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\SendVibration.g.cshtml.cs
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\UsersAcount.g.cshtml.cs
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
@@ -134,7 +127,15 @@ C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcore
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorTargetAssemblyInfo.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.Views.pdb
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.dll
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.pdb
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.deps.json
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.runtimeconfig.json
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.runtimeconfig.dev.json
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.dll
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.pdb
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.Views.dll
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.Views.pdb
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.Views.pdb
 C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CopyComplete
+C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csprojAssemblyReference.cache

@@ -54,6 +54,7 @@ namespace WebPortalAPI.Controllers
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
+        [HttpGet]
         public IActionResult SendVibration()
         {
             UtilityWorker uWorker = new UtilityWorker(roleManager);

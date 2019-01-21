@@ -11,7 +11,7 @@
         <div class="col-md-4">
             <section>
                 <form method="post">
-                    <select asp-for="@user.roleName" class="form-control" asp-items="Model.getTriggerForDropDownList">
+                    <select asp-for="@Model.trigger" class="form-control" asp-items="Model.getTriggerForDropDownList">
                         <option>Select User Type</option>
                     </select>
                     <div class="form-group">

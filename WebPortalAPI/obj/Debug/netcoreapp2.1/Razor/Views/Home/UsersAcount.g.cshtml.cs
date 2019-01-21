@@ -87,12 +87,12 @@ using WebPortalAPI.Models;
             WriteLiteral("\r\n            </div>\r\n            <div class=\"col-sm-8\">\r\n                <section>\r\n                    ");
             EndContext();
             BeginContext(527, 647, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ac1857a32054617ae7013e51db8a9aa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83aba5661ddf433fb1cb18b3c5257d68", async() => {
                 BeginContext(574, 26, true);
                 WriteLiteral("\r\n                        ");
                 EndContext();
                 BeginContext(600, 64, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d5688654fcb8485cafb5ef7a539898a4", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2349d47a18434cdfb6db3a7ba1bb7c24", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -126,12 +126,12 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n                        <div class=\"col-sm-8\">\r\n                            ");
                 EndContext();
                 BeginContext(742, 202, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7858f52e84b749a49986a4e28801dcca", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "050fc908cede4975b215827b487396c0", async() => {
                     BeginContext(838, 34, true);
                     WriteLiteral("\r\n                                ");
                     EndContext();
                     BeginContext(872, 33, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a00bf45b97eb444da0bfc6af8cf0eebe", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46904906e7d0426d946bab6a5cae608a", async() => {
                         BeginContext(880, 16, true);
                         WriteLiteral("Select User Type");
                         EndContext();

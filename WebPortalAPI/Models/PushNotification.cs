@@ -18,6 +18,7 @@ namespace WebPortalAPI.Models
         [DisplayName("Notification Content")]
         public string NotificationContent { get; set; }
         public List<SelectListItem> getTriggerForDropDownList { get; set; }
+        public string trigger { get; set; }
         internal bool SendPushNotification(PushNotification model)
         
         {

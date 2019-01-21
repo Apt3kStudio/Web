@@ -36,7 +36,7 @@
                     @if (User.IsInRole("admin"))
                     {
                         <li><a asp-area="" asp-controller="Home" asp-action="Notification">Notification</a></li>
-
+                        <li><a asp-area="" asp-controller="Home" asp-action="SendVibration">Push Event</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="UsersAcount">Users Account</a></li>
                     }
                 </ul>
