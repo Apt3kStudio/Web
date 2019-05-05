@@ -139,75 +139,75 @@ D:\diosc\D-Document\Source\DioscarRepos\APT3KStudio\WebPortalAPI\obj\Debug\netco
 D:\diosc\D-Document\Source\DioscarRepos\APT3KStudio\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.pdb
 D:\diosc\D-Document\Source\DioscarRepos\APT3KStudio\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CopyComplete
 D:\diosc\D-Document\Source\DioscarRepos\APT3KStudio\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\PushEvent.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csprojAssemblyReference.cache
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CoreCompileInputs.cache
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorAssemblyInfo.cache
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorAssemblyInfo.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.AssemblyInfoInputs.cache
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.AssemblyInfo.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.dll
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.pdb
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.deps.json
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.runtimeconfig.json
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.runtimeconfig.dev.json
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.dll
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.pdb
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.Views.dll
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.Views.pdb
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.TagHelpers.input.cache
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.TagHelpers.output.cache
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorCoreGenerate.cache
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\AccessDenied.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ConfirmEmail.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ExternalLogin.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ForgotPassword.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Lockout.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\LoginWith2fa.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\LoginWithRecoveryCode.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\DeletePersonalData.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\Disable2fa.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\DownloadPersonalData.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\EnableAuthenticator.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\ExternalLogins.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\Index.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\ResetAuthenticator.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\SetPassword.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_Layout.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ResetPassword.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Error.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Notification.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\PushEvent.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\SendVibration.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\UsersAcount.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorTargetAssemblyInfo.cache
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorTargetAssemblyInfo.cs
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.Views.pdb
-C:\Users\Nelson Vasquez\Documents\Apartment3k\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CopyComplete
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.deps.json
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.runtimeconfig.json
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.runtimeconfig.dev.json
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.dll
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.pdb
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.Views.dll
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.1\WebPortalAPI.Views.pdb
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csprojAssemblyReference.cache
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CoreCompileInputs.cache
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorAssemblyInfo.cache
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorAssemblyInfo.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.AssemblyInfoInputs.cache
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.AssemblyInfo.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.TagHelpers.input.cache
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.TagHelpers.output.cache
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorCoreGenerate.cache
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\AccessDenied.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ConfirmEmail.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ExternalLogin.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ForgotPassword.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Lockout.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\LoginWith2fa.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\LoginWithRecoveryCode.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\DeletePersonalData.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\Disable2fa.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\DownloadPersonalData.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\EnableAuthenticator.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\ExternalLogins.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\Index.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\ResetAuthenticator.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\SetPassword.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_Layout.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ResetPassword.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Error.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Notification.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\PushEvent.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Home\UsersAcount.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.RazorTargetAssemblyInfo.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.Views.pdb
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.dll
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.pdb
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CopyComplete
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\UserSetting\Index.g.cshtml.cs
