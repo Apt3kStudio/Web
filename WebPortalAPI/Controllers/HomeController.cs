@@ -54,23 +54,26 @@ namespace WebPortalAPI.Controllers
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
+        [HttpGet]
         public IActionResult PushEvent()
         {
             ViewData["Title"] = "";
-            Events pn = new Events();
-            return View(pn);
+            Events event_model = new Events();
+            event_model.LoadPushEvents();
+            return View(event_model);
         }
         [HttpPost]
-        public IActionResult PushEvent(Events model)
+        public IActionResult PushEvent(Events event_model)
         {
             if (!ModelState.IsValid)
-                return View(model);
+                return View(event_model);
             PushNotification p = new PushNotification();
             p.SendPushNotification(new PushNotification()
-            { NotificationContent = model.EventName,
-                NotificationTitle = model.EventName
+            { NotificationContent = event_model.EventName,
+                NotificationTitle = event_model.EventName
             });
-            return View(model);
+            event_model.LoadPushEvents();
+            return View(event_model);
         }
         [Authorize]
         public IActionResult UsersAcount()

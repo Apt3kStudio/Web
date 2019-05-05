@@ -86,17 +86,17 @@ using WebPortalAPI.Models;
             WriteLiteral("</h2>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n            <section>\r\n                ");
             EndContext();
             BeginContext(237, 414, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d79e1c43c2b042099f415d341135226f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92312f6fed384e4c81accef896c2db05", async() => {
                 BeginContext(257, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(279, 188, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c50c7e8e23544739ec7f18d4de6825f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc75afcca4614bce8aa02aeb9c832b98", async() => {
                     BeginContext(377, 26, true);
                     WriteLiteral("\r\n                        ");
                     EndContext();
                     BeginContext(403, 33, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc7bd027a7974a2f9bc896f994e2afbe", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "035645b095824eaf9a47772b07ae9bb9", async() => {
                         BeginContext(411, 16, true);
                         WriteLiteral("Select User Type");
                         EndContext();

@@ -13,12 +13,18 @@ namespace WebPortalAPI.Models
 
         public Events()
         {
+            //PushEvents = new List<SelectListItem>();
+            //PushEvents.Add(new SelectListItem { Text = "Vibration", Value = "Vibration" });
+            //PushEvents.Add(new SelectListItem { Text = "Sound", Value = "Sound" });
+            //PushEvents.Add(new SelectListItem { Text = "Flashing", Value = "Flashing" });
+        }
+
+        internal void LoadPushEvents()
+        {
             PushEvents = new List<SelectListItem>();
             PushEvents.Add(new SelectListItem { Text = "Vibration", Value = "Vibration" });
             PushEvents.Add(new SelectListItem { Text = "Sound", Value = "Sound" });
             PushEvents.Add(new SelectListItem { Text = "Flashing", Value = "Flashing" });
         }
-
-
     }
 }
