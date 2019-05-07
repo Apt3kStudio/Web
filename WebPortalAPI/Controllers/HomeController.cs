@@ -64,11 +64,11 @@ namespace WebPortalAPI.Controllers
         public IActionResult PushEvent(Events model)
         {
             if (!ModelState.IsValid)
-                return View(model);
+                return View(model);           
             PushNotification p = new PushNotification();
             p.SendPushNotification(new PushNotification()
             { NotificationContent = model.EventName,
-                NotificationTitle = model.EventName
+              NotificationTitle = model.EventName
             });
             return View(model);
         }
