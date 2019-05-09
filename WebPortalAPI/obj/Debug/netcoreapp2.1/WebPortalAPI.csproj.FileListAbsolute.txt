@@ -162,6 +162,7 @@ C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Layout.g.cshtml.cs
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.g.cshtml.cs
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\AccessDenied.g.cshtml.cs
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ConfirmEmail.g.cshtml.cs
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ExternalLogin.g.cshtml.cs
@@ -217,5 +218,4 @@ C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.dll
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.pdb
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csproj.CopyComplete
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.g.cshtml.cs
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.1\WebPortalAPI.csprojAssemblyReference.cache

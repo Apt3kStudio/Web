@@ -66,17 +66,17 @@ using WebPortalAPI.Areas.admin.Models;
             WriteLiteral("\r\n<div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n        <h2>Manage User</h2>\r\n        <hr />\r\n        <br />\r\n    </div>\r\n</div>\r\n\r\n\r\n    <div class=\"row UserAccount-Row\">       \r\n        <div class=\"col-sm-8\">\r\n            <section>\r\n                ");
             EndContext();
             BeginContext(411, 517, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e885fa2b7b9f41cb9c83d55d784a64c6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d257fa36a99e4d6f9b918bc268730727", async() => {
                 BeginContext(454, 88, true);
                 WriteLiteral("                  \r\n                    <div class=\"col-sm-8\">\r\n                        ");
                 EndContext();
                 BeginContext(542, 176, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f00d19e245e49c085dd22117bb848ca", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "634e7417a1f44d59a8dfa0023f8871a8", async() => {
                     BeginContext(620, 30, true);
                     WriteLiteral("\r\n                            ");
                     EndContext();
                     BeginContext(650, 33, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b04f493dc4143d492405d5b839e1e54", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34875b08387d4b079d403d115a9f16b2", async() => {
                         BeginContext(658, 16, true);
                         WriteLiteral("Select User Type");
                         EndContext();

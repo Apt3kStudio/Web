@@ -1,5 +1,27 @@
-﻿
-@{ 
+﻿@model LandingPageVM
+@{
     ViewData["Title"] = "Send Notification";
 }
 
+
+<div class="row">
+    <div class="col-sm-12">
+        @if (User.IsInRole("admin"))
+        {
+            <a asp-area="Admin" asp-controller="Admin" asp-action="Index">Edit Page Content</a>            
+        }
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <p class="">@Html.Raw(Model.Header)</p>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <p class="">@Html.Raw(Model.Body)</p>
+    </div>
+
+</div>
