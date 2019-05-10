@@ -41,7 +41,7 @@ namespace WebPortalAPI.Areas.admin.Controllers
         [Route("Dashboard")]
         public ActionResult Dashboard()
         {
-            Dashboard h = new Data.Dashboard();
+            DashboardVM h = new DashboardVM();
             return View(h);
         }
 

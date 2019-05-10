@@ -48,3 +48,13 @@ text-Logo
     line-height:200px;
   
 }
+.col-layout {
+height:640px;
+
+}
+.outline {
+    outline:1px solid red;
+}
+.right-col-layout {
+    background-color: gray;
+}

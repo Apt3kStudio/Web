@@ -36,15 +36,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="Admin" asp-controller="Admin" asp-action="Index">Home</a></li>
+
                     @if (User.IsInRole("admin"))
                     {
+                        <li><a asp-area="Admin" asp-controller="Admin" asp-action="LandingPage">Landing Page</a></li>
+                        <li><a asp-area="Admin" asp-controller="Admin" asp-action="Dashboard">Dashboard</a></li>
                         <li><a asp-area="Admin" asp-controller="Admin" asp-action="Notification">Notification</a></li>
                         <li>
                             @Html.ActionLink("PushEvent", "PushEvent", "Admin",
                                               new { area = "Admin" })
                         </li>
-
                         <li><a asp-area="Admin" asp-controller="Admin" asp-action="UsersAcount">Users Account</a></li>
                     }
                 </ul>
