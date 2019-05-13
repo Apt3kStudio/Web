@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.DependencyInjection;
 using WebPortalAPI.Data;
 using WebPortalAPI.Models;
 
@@ -17,9 +18,11 @@ namespace WebPortalAPI.Controllers
     {
         private UserManager<ApplicationUser> userManager;
         private RoleManager<ApplicationRole> roleManager;
-
-        public HomeController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager)
+        private ApplicationDbContext db;
+       
+        public HomeController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, IServiceProvider serviceProvider)
         {
+            db = serviceProvider.GetRequiredService<ApplicationDbContext>();
             this.roleManager = roleManager;
             this.userManager = userManager;
         }
@@ -27,8 +30,8 @@ namespace WebPortalAPI.Controllers
         public IActionResult Index()
         {
             ViewData["Title"] = "";
-            PushNotification pn = new PushNotification();
-            return View(pn);
+            LandingPageVM h = new LandingPageVM(db);
+            return View(h);
         }
         [HttpPost]
         public IActionResult Index(PushNotification model)
@@ -64,11 +67,11 @@ namespace WebPortalAPI.Controllers
         public IActionResult PushEvent(Events model)
         {
             if (!ModelState.IsValid)
-                return View(model);
+                return View(model);           
             PushNotification p = new PushNotification();
             p.SendPushNotification(new PushNotification()
             { NotificationContent = model.EventName,
-                NotificationTitle = model.EventName
+              NotificationTitle = model.EventName
             });
             return View(model);
         }

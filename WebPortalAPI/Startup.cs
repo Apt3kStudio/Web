@@ -25,6 +25,7 @@ namespace WebPortalAPI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+          
         }
 
         public IConfiguration Configuration { get; }
@@ -86,7 +87,7 @@ namespace WebPortalAPI
                     };
                 });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
 
 
@@ -110,7 +111,7 @@ namespace WebPortalAPI
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+           
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             //app.UseCookiePolicy();
@@ -121,8 +122,11 @@ namespace WebPortalAPI
 
             app.UseMvc(routes =>
             {
+                #region admin
+                routes.MapRoute("areaRoute", "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+                #endregion
                 routes.MapRoute(
-                    name: "default",
+                    name: "default",    
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
