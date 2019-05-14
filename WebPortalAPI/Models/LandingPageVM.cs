@@ -11,6 +11,7 @@ namespace WebPortalAPI.Models
     {
         public string Header { get; set; }
         public string Body { get; set; }
+        public string ProductDetail { get; set; }
         private ApplicationDbContext db;
 
         public LandingPageVM(ApplicationDbContext _db)
@@ -18,6 +19,8 @@ namespace WebPortalAPI.Models
             db = _db;
             load();
            
+
+
         }
 
         public void load()
@@ -27,8 +30,9 @@ namespace WebPortalAPI.Models
                 db.Dashboards.FirstOrDefault();
                 Header = land?.Header??"";
                 Body = land?.Body??"";
-           
-               
+                ProductDetail = land?.ProductDetail ?? "";
+
+
         }
     }
 }

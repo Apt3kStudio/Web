@@ -5,5 +5,7 @@
 $(function () {   
     CKEDITOR.replace("header"); 
     CKEDITOR.replace("body");  
+    CKEDITOR.replace("detailproduct");  
+
      
 });

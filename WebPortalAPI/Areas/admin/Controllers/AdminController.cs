@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using WebPortalAPI.Areas.admin.Models;
 using WebPortalAPI.Areas.admin.Models;
+using WebPortalAPI.Areas.Admin.Models;
 using WebPortalAPI.Data;
 
 namespace WebPortalAPI.Areas.admin.Controllers
@@ -21,10 +22,11 @@ namespace WebPortalAPI.Areas.admin.Controllers
             db = serviceProvider.GetRequiredService<ApplicationDbContext>();
         }
         [Route("")]
-        [Route("LandingPage")]       
+        [Route("LandingPage")]    
+        [HttpGet]
         public ActionResult Index()
         {
-            Models.LandingPageVM h = new Models.LandingPageVM(db);
+            LandingPageVM h = new LandingPageVM(db);
             return View(h);
         }
         
