@@ -8,5 +8,7 @@ namespace WebPortalAPI.Data
 {
     public class ApplicationUser : IdentityUser
     {
+        public string FBToken { get; set; }
+
     }
 }

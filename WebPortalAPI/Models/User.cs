@@ -13,6 +13,7 @@ namespace WebPortalAPI.Models
         [Required(ErrorMessage ="Password is Required.")]
         public string Password { get; set; }
         public string roleName { get; set; }
+        public string FBToken { get; set; }
 
     }
 }
