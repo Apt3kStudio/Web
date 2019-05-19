@@ -19,9 +19,9 @@ namespace WebPortalAPI.Areas.Admin.Models
         public string ContentType { get; set; }
         public string FCMSendUrl { get; set; }
         public string FBToken { get; set; }
-
+        public string Body { get; set; }
+        public string Title { get; set; }
         WebRequest tRequest;
-
         public FirebaseSupportSerive(FirebaseSetting firebaseSetting)
         {
             #region needs to be remove
@@ -36,10 +36,11 @@ namespace WebPortalAPI.Areas.Admin.Models
             //tRequest.Method = RequestType;
             //tRequest.ContentType = ContentType;
             #endregion
+            Body = "testbody";
+            Title = "testTitle";
             InitializeService(firebaseSetting);
-
+            MaketheAPICall();
         }
-
         private void InitializeService(FirebaseSetting firebaseSetting)
         {
             ApplicationID = firebaseSetting.ApplicationID;
@@ -60,20 +61,18 @@ namespace WebPortalAPI.Areas.Admin.Models
 
             tRequest.ContentType = ContentType;
         }
-
-        public bool SendPushNotification()
+        public bool MaketheAPICall() => Send();
+        private bool Send()
         {
             try
             {
                 var data = new
                 {
                     to = DeviceID,
-
                     notification = new
                     {
-                        body = "",
-
-                        title =""
+                        body = Body,
+                        title = Title
                     }
                 };
                 // JsonConvert serializer = new JsonConvert();
@@ -122,7 +121,5 @@ namespace WebPortalAPI.Areas.Admin.Models
                 return false;
             }
         }
-
-       
     }
 }

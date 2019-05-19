@@ -45,7 +45,8 @@ namespace WebPortalAPI.Areas.admin.Controllers
         [Route("Dashboard")]
         public ActionResult Dashboard()
         {
-            DashboardVM h = new DashboardVM();
+            DashboardVM h = new DashboardVM(db);
+           
             return View(h);
         }
 
@@ -82,5 +83,20 @@ namespace WebPortalAPI.Areas.admin.Controllers
             });
             return View(model);
         }
+        [Route("FirebaseSettings")]
+        [HttpGet]
+        public IActionResult  FirebaseSettings()
+        {
+            return View(new FirebaseSetting());
+        }
+        [Route("FirebaseSettings")]
+        [HttpPost]
+        public IActionResult FirebaseSettings(FirebaseSetting model)
+        {
+
+            return View(new FirebaseSetting());
+        }
+
+
     }
 }

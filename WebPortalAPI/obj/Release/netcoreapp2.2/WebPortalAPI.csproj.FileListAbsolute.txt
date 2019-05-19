@@ -77,3 +77,10 @@ C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcorea
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\WebPortalAPI.dll
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\WebPortalAPI.pdb
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\WebPortalAPI.csproj.CopyComplete
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Admin\FirebaseSettings.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\FirebaseSettings\Create.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\FirebaseSettings\Delete.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\FirebaseSettings\Details.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\FirebaseSettings\Edit.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\FirebaseSettings\Index.g.cshtml.cs
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Release\netcoreapp2.2\WebPortalAPI.csprojAssemblyReference.cache

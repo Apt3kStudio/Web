@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebPortalAPI.Areas.Admin.Models;
 using WebPortalAPI.Data;
 
 namespace WebPortalAPI.Areas.admin.Models
@@ -16,6 +17,9 @@ namespace WebPortalAPI.Areas.admin.Models
         {
             db = _db;
             load();
+
+            var firebaseSetting = db.FirebaseSettings.FirstOrDefault();
+            TestFirebaseConn(firebaseSetting);
         }
         public DashboardVM()
         {           
@@ -28,6 +32,11 @@ namespace WebPortalAPI.Areas.admin.Models
                 land = db.Dashboards.FirstOrDefault();
                 Header = land?.Header ?? "";
                 Body = land?.Body ?? "";
+        }
+        public void TestFirebaseConn(FirebaseSetting model)
+        {
+            FirebaseSupportSerive fss = new FirebaseSupportSerive(model);
+            
         }
 
         internal void Update(ApplicationDbContext _db)

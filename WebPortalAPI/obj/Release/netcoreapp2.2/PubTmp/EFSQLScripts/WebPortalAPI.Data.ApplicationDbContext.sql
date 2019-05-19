@@ -103,3 +103,18 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190518191657_FirebaseSettingColProfileName')
+BEGIN
+    ALTER TABLE [FirebaseSettings] ADD [ProfileName] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190518191657_FirebaseSettingColProfileName')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20190518191657_FirebaseSettingColProfileName', N'2.2.4-servicing-10062');
+END;
+
+GO
+
