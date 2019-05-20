@@ -20,9 +20,9 @@ namespace WebPortalAPI.Areas.Admin.Controllers
         }
 
         // GET: Admin/FirebaseSettings
-        public async Task<IActionResult> Index()
+        public async Task<PartialViewResult> Index()
         {
-            return View(await _context.FirebaseSettings.ToListAsync());
+            return PartialView(await _context.FirebaseSettings.ToListAsync());
         }
 
         // GET: Admin/FirebaseSettings/Details/5

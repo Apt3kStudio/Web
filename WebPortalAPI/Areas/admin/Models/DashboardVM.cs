@@ -11,13 +11,15 @@ namespace WebPortalAPI.Areas.admin.Models
     {
         public string Header { get; set; }
         public string Body { get; set; }
+        public List<FirebaseSetting> firebaseSettings { get; set; }
+
         private ApplicationDbContext db;
 
         public DashboardVM(ApplicationDbContext _db)
         {
             db = _db;
             load();
-
+            firebaseSettings = db.FirebaseSettings.ToList();
             var firebaseSetting = db.FirebaseSettings.FirstOrDefault();
             TestFirebaseConn(firebaseSetting);
         }

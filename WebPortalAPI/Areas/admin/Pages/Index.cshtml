@@ -1,52 +1,44 @@
-﻿@model IEnumerable<WebPortalAPI.Data.FirebaseSetting>
-@using WebPortalAPI.Areas.Admin.Models
-
-@{
-
- Layout = "_Layout";
-    ViewData["Title"] = "Index";
-}
-
-<h2>Index</h2>
+﻿@page
+@model WebPortalAPI.Areas.Admin.Pages.IndexModel
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-page="Create">Create New</a>
 </p>
-<table class="table table-dark">
+<table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ProfileName)
+                @Html.DisplayNameFor(model => model.FirebaseSetting[0].ProfileName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicationID)
+                @Html.DisplayNameFor(model => model.FirebaseSetting[0].ApplicationID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SenderID)
+                @Html.DisplayNameFor(model => model.FirebaseSetting[0].SenderID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeviceID)
+                @Html.DisplayNameFor(model => model.FirebaseSetting[0].DeviceID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.RequestType)
+                @Html.DisplayNameFor(model => model.FirebaseSetting[0].RequestType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ContentType)
+                @Html.DisplayNameFor(model => model.FirebaseSetting[0].ContentType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FCMSendUrl)
+                @Html.DisplayNameFor(model => model.FirebaseSetting[0].FCMSendUrl)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model) {
+@foreach (var item in Model.FirebaseSetting) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.ProfileName)
             </td>
             <td>
-                @Utils.TruncateString(item.ApplicationID,20,20)
+                @Html.DisplayFor(modelItem => item.ApplicationID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SenderID)
@@ -64,9 +56,9 @@
                 @Html.DisplayFor(modelItem => item.FCMSendUrl)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

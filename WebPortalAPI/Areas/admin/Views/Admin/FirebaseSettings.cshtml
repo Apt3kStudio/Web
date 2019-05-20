@@ -1,52 +1,39 @@
-﻿@model WebPortalAPI.Data.FirebaseSetting
+﻿@model IEnumerable<WebPortalAPI.Data.FirebaseSetting>
+@using WebPortalAPI.Areas.Admin.Models
 
-<h4>FirebaseSetting</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="FirebaseSettings">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ApplicationID" class="control-label"></label>
-                <input asp-for="ApplicationID" class="form-control" />
-                <span asp-validation-for="ApplicationID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SenderID" class="control-label"></label>
-                <input asp-for="SenderID" class="form-control" />
-                <span asp-validation-for="SenderID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeviceID" class="control-label"></label>
-                <input asp-for="DeviceID" class="form-control" />
-                <span asp-validation-for="DeviceID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RequestType" class="control-label"></label>
-                <input asp-for="RequestType" class="form-control" />
-                <span asp-validation-for="RequestType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ContentType" class="control-label"></label>
-                <input asp-for="ContentType" class="form-control" />
-                <span asp-validation-for="ContentType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FCMSendUrl" class="control-label"></label>
-                <input asp-for="FCMSendUrl" class="form-control" />
-                <span asp-validation-for="FCMSendUrl" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
-    </div>
-</div>
+@{
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+ Layout = "_Layout";
+    ViewData["Title"] = "Index";
 }
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfileName)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfileName)
+            </td>          
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

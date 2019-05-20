@@ -7,7 +7,7 @@ namespace WebPortalAPI.Areas.Admin.Models
 {
     public class Utils
     {
-        public string TruncateString(string content, int isGreaterThan, int keppThisNumber)
+        public static string TruncateString(string content, int isGreaterThan, int keppThisNumber)
         {           
             if (content.Length > isGreaterThan)
             {
