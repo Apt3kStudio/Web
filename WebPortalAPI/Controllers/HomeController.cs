@@ -57,16 +57,19 @@ namespace WebPortalAPI.Controllers
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
+        [HttpGet]
         public IActionResult PushEvent()
         {
             ViewData["Title"] = "";
-            Events pn = new Events();
-            return View(pn);
+            Events event_model = new Events();
+            event_model.LoadPushEvents();
+            return View(event_model);
         }
         [HttpPost]
-        public IActionResult PushEvent(Events model)
+        public IActionResult PushEvent(Events event_model)
         {
             if (!ModelState.IsValid)
+<<<<<<< HEAD
                 return View(model);           
             PushNotification p = new PushNotification();
             p.SendPushNotification(new PushNotification()
@@ -74,6 +77,13 @@ namespace WebPortalAPI.Controllers
               NotificationTitle = model.EventName
             });
             return View(model);
+=======
+                return View(event_model);
+            event_model.SendEvent();
+            event_model.LoadPushEvents();
+
+            return View(event_model);
+>>>>>>> feature/Dropdown_PushNotification_Fix
         }
         [Authorize]
         public IActionResult UsersAcount()
