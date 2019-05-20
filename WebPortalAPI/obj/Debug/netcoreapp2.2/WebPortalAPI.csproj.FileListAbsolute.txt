@@ -76,5 +76,4 @@ C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.dll
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.pdb
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.csproj.CopyComplete
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.csprojAssemblyReference.cache
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Admin\Dashboard.g.cshtml.cs
