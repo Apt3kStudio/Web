@@ -4,4 +4,18 @@ This file is used by the publish/package process of your Web project. You can cu
 by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwwrcniEOd0GKdNEAjfsrIAAAAAACAAAAAAAQZgAAAAEAACAAAAB7F2IwiK9mLWasOPhm36MwpnEq+vtJbOqELRfA67kJpgAAAAAOgAAAAAIAACAAAAChNS5k3/L446npHnWruQI7aPfRCzRvxW9hwYdxiZEek4AAAABQlpY2pDz55lKA80vZPGeTsoQ93zZ1FkWm0LfqjEbcq2GEmwn0J+UajW24puQnfxAxuD6tCleyb70Z/ZYSgFcEqG5k0VdTMaPs+OhElTRWFEfblMuX7spjfQDDxq8+RL/+o12/AiexiJbj68qvSaQE1VXylblUBid72Pe/DmGcakAAAADlLENm6XpolxTclxLx+9DkicupWVVC7TH+t0NI8XxXVWhYeOfsADc1enqeug3QjyBwRehRIdePQwAAaXOCDXC4</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:apt3kwebportaldbserver.database.windows.net,1433%3bInitial Catalog=apt3kdb%3bUser Id=dioscarrapt3k%40apt3kwebportaldbserver.database.windows.net%3bPassword=dRrd1229!%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="WebPortalAPI.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:apt3kwebportaldbserver.database.windows.net,1433%3bInitial Catalog=apt3kdb%3bUser Id=dioscarrapt3k%40apt3kwebportaldbserver.database.windows.net%3bPassword=dRrd1229!%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
 </Project>

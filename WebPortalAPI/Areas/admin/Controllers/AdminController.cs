@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WebPortalAPI.Areas.admin.Models;
 using WebPortalAPI.Areas.admin.Models;
@@ -14,6 +16,7 @@ namespace WebPortalAPI.Areas.admin.Controllers
 {
     [Area("Admin")]
     [Route("admin")]
+    [Authorize]
     public class AdminController : Controller
     {
         private ApplicationDbContext db;
@@ -43,7 +46,8 @@ namespace WebPortalAPI.Areas.admin.Controllers
         [Route("Dashboard")]
         public ActionResult Dashboard()
         {
-            DashboardVM h = new DashboardVM();
+            DashboardVM h = new DashboardVM(db);
+           
             return View(h);
         }
 
@@ -79,6 +83,15 @@ namespace WebPortalAPI.Areas.admin.Controllers
                 NotificationTitle = model.EventName
             });
             return View(model);
+        }      
+       
+        [Route("FirebaseSettings")]
+        [HttpGet]        
+        public async Task<PartialViewResult> FirebaseSettings()
+        {
+            return PartialView(await db.FirebaseSettings.ToListAsync());
         }
+
+
     }
 }
