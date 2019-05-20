@@ -67,12 +67,9 @@ namespace WebPortalAPI.Controllers
         {
             if (!ModelState.IsValid)
                 return View(event_model);
-            PushNotification p = new PushNotification();
-            p.SendPushNotification(new PushNotification()
-            { NotificationContent = event_model.EventName,
-                NotificationTitle = event_model.EventName
-            });
+            event_model.SendEvent();
             event_model.LoadPushEvents();
+
             return View(event_model);
         }
         [Authorize]
