@@ -2,3 +2,10 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+$(function () {   
+    CKEDITOR.replace("header"); 
+    CKEDITOR.replace("body");  
+    CKEDITOR.replace("detailproduct");  
+
+     
+});

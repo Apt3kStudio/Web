@@ -40,4 +40,21 @@ body {
     border: 1px solid #f3f3f3;
     padding: 10px;
 }
+.logo {
+height:50px;
+}
+text-Logo
+{
+    line-height:200px;
+  
+}
+.col-layout {
+height:640px;
 
+}
+.outline {
+    outline:1px solid red;
+}
+.right-col-layout {
+    background-color: gray;
+}
