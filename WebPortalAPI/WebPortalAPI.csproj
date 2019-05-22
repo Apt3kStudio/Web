@@ -363,10 +363,10 @@
     <Content Update="Areas\Admin\Pages\Details.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Pages\Edit.cshtml">
+    <Content Update="Areas\Admin\Pages\firebaseEdit.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Pages\Index.cshtml">
+    <Content Update="Areas\Admin\Pages\firebaseIndex.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <Content Update="Areas\Admin\Views\Admin\PushEvent.cshtml">
@@ -387,7 +387,7 @@
     <Content Update="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Areas\Admin\Views\_ViewImports.cshtml">
+    <Content Update="Areas\Admin\_ViewImports.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>

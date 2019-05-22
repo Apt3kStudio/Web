@@ -1,0 +1,89 @@
+﻿@page
+
+@model WebPortalAPI.Areas.Admin.Pages.IndexModel
+
+<div class="row ">
+    <div class="col-sm-12 firebaseContentHeader box-Shadow-light">
+        <h1>Firebase Settings Management</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 addFirebaseBox">
+        <p>
+            <a asp-page="firebaseCreate">Add Firebase Setting</a>
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 box-Shadow-light firebaseContentBody">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirebaseSetting[0].ProfileName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirebaseSetting[0].ApplicationID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirebaseSetting[0].SenderID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirebaseSetting[0].DeviceID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirebaseSetting[0].RequestType)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirebaseSetting[0].ContentType)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirebaseSetting[0].FCMSendUrl)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.FirebaseSetting)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProfileName)
+                        </td>
+                        <td>
+                            @utility.TruncateString(item.ApplicationID, 20, 20)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SenderID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DeviceID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RequestType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContentType)
+                        </td>
+                        <td>
+                            @utility.TruncateString(item.FCMSendUrl, 20, 20)
+                        </td>
+                        <td>
+                            <a asp-page="./firebaseEdit" asp-route-id="@item.ID">Edit</a> |
+                            <a asp-page="./firebaseDetails" asp-route-id="@item.ID">Details</a> |
+                            <a asp-page="./firebaseDelete" asp-route-id="@item.ID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@functions{
+
+   
+
+    Utils utility = new Utils();
+}

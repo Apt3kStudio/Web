@@ -14,7 +14,7 @@
         "outputPath": "C:\\Users\\Diosc\\Documents\\Repos\\APT3KStudio\\Web\\WebPortalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
