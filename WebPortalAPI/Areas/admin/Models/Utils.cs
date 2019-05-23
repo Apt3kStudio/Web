@@ -11,7 +11,6 @@ namespace WebPortalAPI.Areas.Admin.Models
         {           
             if (content.Length > isGreaterThan)
             {
-
                 content = (content).Substring(0, keppThisNumber) + "...";
             }
             return content;
