@@ -36,7 +36,7 @@ namespace WebPortalAPI.Areas.Admin.Pages
             _context.FirebaseSettings.Add(FirebaseSetting);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./firebaseIndex");
         }
     }
 }
