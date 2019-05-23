@@ -82,21 +82,3 @@ height:640px;
 .firebaseContentBody {
 height:500px;
 }
-.firebaseContentBody {
-    height: 500px;
-    background-color: rgb(7, 31, 51);
-}
-.firebaseContentBody > table th {
-    background-color: rgb(22, 60, 94);
-    color: white;
-    border-right: 1px solid rgb(72, 89, 104);
-}
- .firebaseContentBody > table td {
-        background-color: rgb(39, 62, 82);
-        color: white;
-        height: 50px;
-        padding-top: 15px !important;
-        padding-bottom: 15px !important;
-        border-bottom: 1px solid white;
-        border-right: 1px solid rgb(72, 89, 104);
- }
