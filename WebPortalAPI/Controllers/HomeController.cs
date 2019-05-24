@@ -69,21 +69,11 @@ namespace WebPortalAPI.Controllers
         public IActionResult PushEvent(Events event_model)
         {
             if (!ModelState.IsValid)
-<<<<<<< HEAD
-                return View(model);           
-            PushNotification p = new PushNotification();
-            p.SendPushNotification(new PushNotification()
-            { NotificationContent = model.EventName,
-              NotificationTitle = model.EventName
-            });
-            return View(model);
-=======
-                return View(event_model);
+            return View(event_model);
             event_model.SendEvent();
             event_model.LoadPushEvents();
 
             return View(event_model);
->>>>>>> feature/Dropdown_PushNotification_Fix
         }
         [Authorize]
         public IActionResult UsersAcount()

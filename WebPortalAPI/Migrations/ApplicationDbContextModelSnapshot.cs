@@ -234,6 +234,8 @@ namespace WebPortalAPI.Data.Migrations
 
                     b.Property<string>("ProductDetail");
 
+                    b.Property<string>("logo");
+
                     b.HasKey("ID");
 
                     b.ToTable("LandingPages");
