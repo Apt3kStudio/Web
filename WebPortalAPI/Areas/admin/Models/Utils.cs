@@ -7,11 +7,10 @@ namespace WebPortalAPI.Areas.Admin.Models
 {
     public class Utils
     {
-        public static string TruncateString(string content, int isGreaterThan, int keppThisNumber)
+        public string TruncateString(string content, int isGreaterThan, int keppThisNumber)
         {           
             if (content.Length > isGreaterThan)
             {
-
                 content = (content).Substring(0, keppThisNumber) + "...";
             }
             return content;

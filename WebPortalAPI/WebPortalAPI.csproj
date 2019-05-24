@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\testcss\**" />
+    <Content Remove="wwwroot\css\testcss\**" />
+    <EmbeddedResource Remove="wwwroot\css\testcss\**" />
+    <None Remove="wwwroot\css\testcss\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp2.2\WebPortalAPI.deps.json" />
+    <Content Include="bin\Debug\netcoreapp2.2\WebPortalAPI.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\netcoreapp2.2\WebPortalAPI.runtimeconfig.json" />
+    <Content Include="bin\Release\netcoreapp2.2\WebPortalAPI.deps.json" />
+    <Content Include="bin\Release\netcoreapp2.2\WebPortalAPI.runtimeconfig.dev.json" />
+    <Content Include="bin\Release\netcoreapp2.2\WebPortalAPI.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CKEditor" Version="3.6.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
@@ -17,9 +33,18 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Identity\Services\" />
     <Folder Include="Data\Migrations\" />
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\netcoreapp2.2\WebPortalAPI.dll" />
+    <None Include="bin\Debug\netcoreapp2.2\WebPortalAPI.pdb" />
+    <None Include="bin\Debug\netcoreapp2.2\WebPortalAPI.Views.dll" />
+    <None Include="bin\Debug\netcoreapp2.2\WebPortalAPI.Views.pdb" />
+    <None Include="bin\Release\netcoreapp2.2\WebPortalAPI.dll" />
+    <None Include="bin\Release\netcoreapp2.2\WebPortalAPI.pdb" />
+    <None Include="bin\Release\netcoreapp2.2\WebPortalAPI.Views.dll" />
+    <None Include="bin\Release\netcoreapp2.2\WebPortalAPI.Views.pdb" />
     <None Include="wwwroot\images\Landing.png" />
     <None Include="wwwroot\js\ckeditor\adapters\jquery.js" />
     <None Include="wwwroot\js\ckeditor\build-config.js" />
@@ -363,10 +388,10 @@
     <Content Update="Areas\Admin\Pages\Details.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Pages\Edit.cshtml">
+    <Content Update="Areas\Admin\Pages\firebaseEdit.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Pages\Index.cshtml">
+    <Content Update="Areas\Admin\Pages\firebaseIndex.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <Content Update="Areas\Admin\Views\Admin\PushEvent.cshtml">
@@ -387,7 +412,7 @@
     <Content Update="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Areas\Admin\Views\_ViewImports.cshtml">
+    <Content Update="Areas\Admin\_ViewImports.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>

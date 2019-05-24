@@ -1,0 +1,67 @@
+﻿@page
+@model WebPortalAPI.Areas.Admin.Pages.DetailsModel
+<div class="row ">
+    <div class="col-sm-12 firebaseContentHeader box-Shadow-light">
+        <h1>Firebase Settings Management</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 addFirebaseBox">
+        <p>
+            <a asp-page="firebaseCreate">Add Firebase Setting</a>
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 addFirebaseBox box-Shadow-light firebaseDeletebox">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FirebaseSetting.ProfileName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirebaseSetting.ProfileName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirebaseSetting.ApplicationID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirebaseSetting.ApplicationID)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirebaseSetting.SenderID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirebaseSetting.SenderID)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirebaseSetting.DeviceID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirebaseSetting.DeviceID)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirebaseSetting.RequestType)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirebaseSetting.RequestType)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirebaseSetting.ContentType)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirebaseSetting.ContentType)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirebaseSetting.FCMSendUrl)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirebaseSetting.FCMSendUrl)
+            </dd>
+        </dl>
+    </div>
+</div>
+    <div>
+        <a asp-page="/firebaseEdit" asp-route-id="@Model.FirebaseSetting.ID">Edit</a> |
+        <a asp-page="/firebaseIndex">Back to List</a>
+    </div>

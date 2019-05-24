@@ -39,14 +39,15 @@
 
                     @if (User.IsInRole("admin"))
                     {
-                    <li><a asp-area="Admin" asp-controller="Admin" asp-action="LandingPage">Landing Page</a></li>
-                    <li><a asp-area="Admin" asp-controller="Admin" asp-action="Dashboard">Dashboard</a></li>
-                    <li><a asp-area="Admin" asp-controller="Admin" asp-action="Notification">Notification</a></li>
-                    <li>
-                        @Html.ActionLink("PushEvent", "PushEvent", "Admin",
-                                          new { area = "Admin" })
-                    </li>
-                    <li><a asp-area="Admin" asp-controller="Admin" asp-action="UsersAcount">Users Account</a></li>
+                        <li><a asp-area="Admin" asp-controller="Admin" asp-action="Index">Landing Page</a></li>
+                        <li><a asp-area="Admin" asp-controller="Admin" asp-action="Dashboard">Dashboard</a></li>
+                        @*<li><a asp-area="Admin" asp-controller="Admin" asp-action="Notification">Notification</a></li>*@
+                        <li><a asp-page="/firebaseIndex">Firebase Settings</a></li>
+                        <li>
+                            @Html.ActionLink("PushEvent", "PushEvent", "Admin",
+                                              new { area = "Admin" })
+                        </li>
+                        <li><a asp-area="Admin" asp-controller="Admin" asp-action="UsersAcount">Users Account</a></li>
                     }
                 </ul>
                 <partial asp-area="Admin" name="_LoginPartial" />

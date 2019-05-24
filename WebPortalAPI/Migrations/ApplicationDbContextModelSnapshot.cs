@@ -211,6 +211,8 @@ namespace WebPortalAPI.Data.Migrations
 
                     b.Property<string>("FCMSendUrl");
 
+                    b.Property<long>("GoogleServicesFileURL");
+
                     b.Property<string>("ProfileName");
 
                     b.Property<string>("RequestType");

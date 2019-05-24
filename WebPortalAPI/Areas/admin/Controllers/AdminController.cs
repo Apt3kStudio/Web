@@ -24,7 +24,7 @@ namespace WebPortalAPI.Areas.admin.Controllers
         {
             db = serviceProvider.GetRequiredService<ApplicationDbContext>();
         }
-        [Route("")]
+      
         [Route("LandingPage")]    
         [HttpGet]
         public ActionResult Index()

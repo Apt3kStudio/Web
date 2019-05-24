@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "defaultProvider": "filesystem",
+  "libraries": [
+    {
+      "library": "wwwroot/css/site.css",
+      "destination": "wwwroot/css/",
+      "files": [
+        "site.min.css"
+      ]
+    },
+    {
+      "library": "wwwroot/js/site.js",
+      "destination": "wwwroot/js/",
+      "files": [
+        "site.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "summernote@0.8.12",
+      "destination": "wwwroot/js/summernote/"
+    }
+  ]
+}
