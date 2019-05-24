@@ -24,8 +24,7 @@ namespace WebPortalAPI
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
-          
+            Configuration = configuration;          
         }
 
         public IConfiguration Configuration { get; }
@@ -62,17 +61,9 @@ namespace WebPortalAPI
             #region Symetric security key
             var symetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
             #endregion
-            services.AddAuthentication(
-                //options => //Not working: Figure out why
-                //{
-                //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                //    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                //}
-                ).AddCookie(cfg => cfg.SlidingExpiration = true)
+            services.AddAuthentication().AddCookie(cfg => cfg.SlidingExpiration = true)
             .AddJwtBearer(options =>
                 {
-
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         #region what to validate
@@ -88,12 +79,7 @@ namespace WebPortalAPI
                 });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
-
-
-
-
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(  IApplicationBuilder app,
                                 IHostingEnvironment env,
