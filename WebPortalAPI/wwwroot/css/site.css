@@ -52,12 +52,10 @@ text-Logo
 height:640px;
 
 }
-.outline {
-    outline:1px solid red;
-}
 .right-col-layout {
     background-color: gray;
 }
+
 .firebaseContentHeader {
     margin-top:50px;
     height: 100px;
@@ -172,4 +170,32 @@ height:500px;
     font-size: 18px;
     color: black;
     padding: 40px;
+}
+#tag{
+    color:red;
+    width:100%;
+    text-align:center;
+    font-size:22px;
+}
+#title{
+    color:#ffffff;
+    width:100%;
+    text-align:center;
+    font-size:22px;
+}
+.top-section-logo {
+    text-align:center;
+}
+/*.outline {
+    outline: 1px solid #b6ff00;
+}*/
+.feature-icon-container{
+    text-align:center;
+    height:150px;
+}
+.feature-icon-container img {
+    margin:26px 39px;
+    font-size:70px;
+    height:70px;
+
 }

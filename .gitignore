@@ -51,3 +51,26 @@ WebPortalAPI/obj/project.assets.json
 WebPortalAPI/obj/WebPortalAPI.csproj.nuget.g.targets
 WebPortalAPI/obj/WebPortalAPI.csproj.nuget.g.props
 WebPortalAPI/obj/WebPortalAPI.csproj.nuget.cache
+WebPortalAPI/obj/Release/netcoreapp2.2/WebPortalAPI.csproj.FileListAbsolute.txt
+WebPortalAPI/obj/Release/netcoreapp2.2/Razor/Areas/Admin/_ViewStart.g.cshtml.cs
+WebPortalAPI/obj/Release/netcoreapp2.2/Razor/Areas/Admin/Views/Admin/PushEvent.g.cshtml.cs
+WebPortalAPI/obj/Release/netcoreapp2.2/Razor/Areas/Admin/Views/Admin/Index.g.cshtml.cs
+WebPortalAPI/obj/Release/netcoreapp2.2/Razor/Areas/Admin/Views/Admin/FirebaseSettings.g.cshtml.cs
+WebPortalAPI/obj/Release/netcoreapp2.2/Razor/Areas/Admin/Views/Admin/Dashboard.g.cshtml.cs
+WebPortalAPI/obj/Release/netcoreapp2.2/Razor/Areas/Admin/Pages/firebaseIndex.g.cshtml.cs
+WebPortalAPI/obj/Release/netcoreapp2.2/Razor/Areas/Admin/Pages/firebaseCreate.g.cshtml.cs
+WebPortalAPI/obj/Release/netcoreapp2.2/PubTmp/Out/wwwroot/js/site.min.js
+WebPortalAPI/obj/Release/netcoreapp2.2/PubTmp/Out/wwwroot/images/site.min.css
+WebPortalAPI/obj/Release/netcoreapp2.2/PubTmp/Out/wwwroot/css/site.min.css
+WebPortalAPI/obj/Release/netcoreapp2.2/PubTmp/Out/wwwroot/css/site.css
+WebPortalAPI/obj/Debug/netcoreapp2.2/WebPortalAPI.csproj.FileListAbsolute.txt
+WebPortalAPI/obj/Debug/netcoreapp2.2/WebPortalAPI.RazorTargetAssemblyInfo.cache
+WebPortalAPI/obj/Debug/netcoreapp2.2/WebPortalAPI.RazorAssemblyInfo.cache
+WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Areas/Admin/_ViewStart.g.cshtml.cs
+WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Areas/Admin/_ViewImports.g.cshtml.cs
+WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Areas/Admin/Views/Admin/Index.g.cshtml.cs
+WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Areas/Admin/Pages/firebaseDelete.g.cshtml.cs
+WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Areas/Admin/Pages/firebaseCreate.g.cshtml.cs
+WebPortalAPI/Properties/PublishProfiles/WebPortalAPI20190517090244 - Web Deploy.pubxml.user
+WebPortalAPI/obj/Debug/netcoreapp2.2/WebPortalAPI.csprojAssemblyReference.cache
+WebPortalAPI/bin/Release/netcoreapp2.2/WebPortalAPI.runtimeconfig.dev.json

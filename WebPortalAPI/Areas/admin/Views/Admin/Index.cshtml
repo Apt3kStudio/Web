@@ -13,10 +13,16 @@
         <form asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <label asp-for="logo" class="control-label"></label>
+                <textarea asp-for="logo" class="form-control" id="logo"></textarea>
+                <span asp-validation-for="logo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Header" class="control-label"></label>
                 <textarea asp-for="Header" class="form-control box-Shadow-light" id="header"></textarea>
                 <span asp-validation-for="Header" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Body" class="control-label"></label>
                 <textarea asp-for="Body" class="form-control box-Shadow-ligh" id="body"></textarea>
