@@ -87,6 +87,9 @@ WebPortalAPI/bin/Debug/netcoreapp2.2/WebPortalAPI.dll
 WebPortalAPI/bin/Debug/netcoreapp2.2/WebPortalAPI.Views.pdb
 WebPortalAPI/bin/Debug/netcoreapp2.2/WebPortalAPI.Views.dll
 WebPortalAPI/obj/
+<<<<<<< HEAD
 .vs/WebPortalAPI/v16/Server/sqlite3/storage.ide
 .vs/WebPortalAPI/v16/.suo
 .vs/WebPortalAPI/DesignTimeBuild/.dtbcache
+=======
+>>>>>>> a61ad3c1138e41a214e00458188934389ae40133
