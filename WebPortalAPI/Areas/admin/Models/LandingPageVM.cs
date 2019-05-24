@@ -11,6 +11,8 @@ namespace WebPortalAPI.Areas.admin.Models
         public string Header { get; set; }
         public string Body { get; set; }
         public string ProductDetail { get; set; }
+        public string logo { get; set; }
+
         private ApplicationDbContext db;
 
         public LandingPageVM(ApplicationDbContext _db)
@@ -32,6 +34,7 @@ namespace WebPortalAPI.Areas.admin.Models
                 Header = land?.Header ?? "";
                 Body = land?.Body ?? "";
                 ProductDetail = land?.ProductDetail ?? "";
+                logo = land?.logo ?? "";
 
         }
 
@@ -45,6 +48,7 @@ namespace WebPortalAPI.Areas.admin.Models
                 land.Header = Header;
                 land.Body = Body;
                 land.ProductDetail = ProductDetail;
+                land.logo = logo;
                 db.LandingPages.Update(land);
                 db.SaveChanges();
             }
@@ -54,6 +58,7 @@ namespace WebPortalAPI.Areas.admin.Models
                 landInsert.Header = Header;
                 landInsert.Body = Body;
                 landInsert.ProductDetail = ProductDetail;
+                landInsert.logo = logo;
                 db.LandingPages.Add(landInsert);
                 db.SaveChanges();
             }

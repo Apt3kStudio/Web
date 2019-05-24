@@ -69,12 +69,12 @@ namespace WebPortalAPI.Controllers
         public IActionResult PushEvent(Events event_model)
         {
             if (!ModelState.IsValid)
-                return View(event_model);
+            return View(event_model);
+
             event_model.SendEvent();
             event_model.LoadPushEvents();
 
             return View(event_model);
-
         }
         [Authorize]
         public IActionResult UsersAcount()

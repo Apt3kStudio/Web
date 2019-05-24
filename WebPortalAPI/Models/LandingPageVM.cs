@@ -12,15 +12,13 @@ namespace WebPortalAPI.Models
         public string Header { get; set; }
         public string Body { get; set; }
         public string ProductDetail { get; set; }
+        public string logo { get; set; }
         private ApplicationDbContext db;
 
         public LandingPageVM(ApplicationDbContext _db)
         {
             db = _db;
-            load();
-           
-
-
+            load();           
         }
 
         public void load()
@@ -31,8 +29,7 @@ namespace WebPortalAPI.Models
                 Header = land?.Header??"";
                 Body = land?.Body??"";
                 ProductDetail = land?.ProductDetail ?? "";
-
-
+                logo = land?.logo ?? "";
         }
     }
 }

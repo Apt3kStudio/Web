@@ -16,5 +16,7 @@ namespace WebPortalAPI.Data
         public string Header { get; set; }
         public string Body { get; set; }
         public string ProductDetail { get; set; }
+        public string logo { get; set; }
+
     }
 }

@@ -1,29 +1,26 @@
-﻿@model LandingPageVM
+﻿    @model LandingPageVM
 @{
     ViewData["Title"] = "Send Notification";
 }
 
-
-<div class="row">
-    <div class="col-sm-12">
-        @if (User.IsInRole("admin"))
-        {
-            <a asp-area="Admin" asp-controller="Admin" asp-action="Index">Edit Page Content</a>            
-        }
+@if (User.IsInRole("admin"))
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <a asp-area="Admin" asp-controller="Admin" asp-action="Index">Edit Page Content</a>
+        </div>
     </div>
-
-</div>
-<div class="row">
-    <div class="col-sm-12">
-        <p class="">@Html.Raw(Model.Header)</p>
-    </div>
+}
+<div class="row" style="background-image:url('/images/Background3@2x.png');background-size: auto;height:495px;background-size: 100% 281%;background-repeat: no-repeat;">
+    <div class="top-section-logo col-sm-12 outline"><img src="~/images/@(Model.logo)" /> </div>
+    <div class="top-section-title col-sm-12 outline">@Html.Raw(Model.Header)</div>
+    <div class="col-sm-12 form-inline feature-icon-container outline"><img src="~/images/Mask Group 1.png" /> <img src="~/images/Mask Group 3.png" /> <img src="~/images/Mask Group 2.png" /></div>
 
 </div>
 <div class="row">
     <div class="col-sm-12">
         <p class="">@Html.Raw(Model.Body)</p>
     </div>
-
 </div>
 <div class="row">
     <div class="col-sm-12">

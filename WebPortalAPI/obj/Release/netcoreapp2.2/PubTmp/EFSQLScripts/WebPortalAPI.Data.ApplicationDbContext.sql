@@ -118,3 +118,54 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190521010130_addnewfilforlogo')
+BEGIN
+    ALTER TABLE [LandingPages] ADD [logo] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190521010130_addnewfilforlogo')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20190521010130_addnewfilforlogo', N'2.2.4-servicing-10062');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190523230324_googleservicejson')
+BEGIN
+    ALTER TABLE [FirebaseSettings] ADD [GoogleServicesFileURL] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190523230324_googleservicejson')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20190523230324_googleservicejson', N'2.2.4-servicing-10062');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190523232405_googleservicejson1')
+BEGIN
+    DECLARE @var0 sysname;
+    SELECT @var0 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[FirebaseSettings]') AND [c].[name] = N'GoogleServicesFileURL');
+    IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [FirebaseSettings] DROP CONSTRAINT [' + @var0 + '];');
+    ALTER TABLE [FirebaseSettings] ALTER COLUMN [GoogleServicesFileURL] bigint NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20190523232405_googleservicejson1')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20190523232405_googleservicejson1', N'2.2.4-servicing-10062');
+END;
+
+GO
+

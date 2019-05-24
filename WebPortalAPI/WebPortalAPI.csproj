@@ -14,15 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="bin\Debug\netcoreapp2.2\WebPortalAPI.deps.json" />
-    <Content Include="bin\Debug\netcoreapp2.2\WebPortalAPI.runtimeconfig.dev.json" />
-    <Content Include="bin\Debug\netcoreapp2.2\WebPortalAPI.runtimeconfig.json" />
-    <Content Include="bin\Release\netcoreapp2.2\WebPortalAPI.deps.json" />
-    <Content Include="bin\Release\netcoreapp2.2\WebPortalAPI.runtimeconfig.dev.json" />
-    <Content Include="bin\Release\netcoreapp2.2\WebPortalAPI.runtimeconfig.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CKEditor" Version="3.6.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
@@ -37,14 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="bin\Debug\netcoreapp2.2\WebPortalAPI.dll" />
-    <None Include="bin\Debug\netcoreapp2.2\WebPortalAPI.pdb" />
-    <None Include="bin\Debug\netcoreapp2.2\WebPortalAPI.Views.dll" />
-    <None Include="bin\Debug\netcoreapp2.2\WebPortalAPI.Views.pdb" />
-    <None Include="bin\Release\netcoreapp2.2\WebPortalAPI.dll" />
-    <None Include="bin\Release\netcoreapp2.2\WebPortalAPI.pdb" />
-    <None Include="bin\Release\netcoreapp2.2\WebPortalAPI.Views.dll" />
-    <None Include="bin\Release\netcoreapp2.2\WebPortalAPI.Views.pdb" />
     <None Include="wwwroot\images\Landing.png" />
     <None Include="wwwroot\js\ckeditor\adapters\jquery.js" />
     <None Include="wwwroot\js\ckeditor\build-config.js" />

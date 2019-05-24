@@ -6,6 +6,7 @@ $(function () {
     CKEDITOR.replace("header"); 
     CKEDITOR.replace("body");  
     CKEDITOR.replace("detailproduct");  
+    CKEDITOR.replace("logo");  
     console.log("site.js is connected");
      
 });

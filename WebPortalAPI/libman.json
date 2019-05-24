@@ -20,6 +20,11 @@
       "provider": "cdnjs",
       "library": "summernote@0.8.12",
       "destination": "wwwroot/js/summernote/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "font-awesome@5.8.2",
+      "destination": "wwwroot/css/font-awesome/"
     }
   ]
 }
