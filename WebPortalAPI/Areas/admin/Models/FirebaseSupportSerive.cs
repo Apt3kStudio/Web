@@ -21,6 +21,7 @@ namespace WebPortalAPI.Areas.Admin.Models
         public string FBToken { get; set; }
         public string Body { get; set; }
         public string Title { get; set; }
+        public string GoogleServicesFileURL { get; set; }
         WebRequest tRequest;
         public FirebaseSupportSerive(FirebaseSetting firebaseSetting)
         {

@@ -1,10 +1,3 @@
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.deps.json
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.runtimeconfig.json
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.runtimeconfig.dev.json
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.dll
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.pdb
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.Views.dll
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.Views.pdb
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.csproj.CoreCompileInputs.cache
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.RazorAssemblyInfo.cache
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.RazorAssemblyInfo.cs
@@ -81,8 +74,14 @@ C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.RazorTargetAssemblyInfo.cs
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.Views.pdb
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.dll
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.pdb
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.deps.json
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.runtimeconfig.json
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.runtimeconfig.dev.json
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.dll
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.pdb
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.Views.dll
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\bin\Debug\netcoreapp2.2\WebPortalAPI.Views.pdb
+C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.Views.pdb
 C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.csproj.CopyComplete
-C:\Users\Diosc\Documents\Repos\APT3KStudio\Web\WebPortalAPI\obj\Debug\netcoreapp2.2\WebPortalAPI.csprojAssemblyReference.cache

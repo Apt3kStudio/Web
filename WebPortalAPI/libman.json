@@ -15,6 +15,11 @@
       "files": [
         "site.min.js"
       ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "summernote@0.8.12",
+      "destination": "wwwroot/js/summernote/"
     }
   ]
 }
