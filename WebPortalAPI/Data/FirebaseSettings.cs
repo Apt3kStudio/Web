@@ -22,7 +22,7 @@ namespace WebPortalAPI.Data
         public string FCMSendUrl { get; set; }
         [Display(Name = "Private Schedule Size (bytes)")]
         [DisplayFormat(DataFormatString = "{0:N1}")]
-        public long GoogleServicesSize { get; set; }
+        public long? GoogleServicesSize { get; set; }
         public string GoogleServicesData { get; set; }
     }
 }

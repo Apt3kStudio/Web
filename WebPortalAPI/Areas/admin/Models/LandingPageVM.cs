@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace WebPortalAPI.Areas.admin.Models
         public string Body { get; set; }
         public string ProductDetail { get; set; }
         public string logo { get; set; }
+        public IFormFile file { get; set; }
 
         private ApplicationDbContext db;
 

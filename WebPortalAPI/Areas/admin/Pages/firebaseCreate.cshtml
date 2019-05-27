@@ -5,47 +5,47 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FirebaseSetting.ProfileName" class="control-label"></label>
-                <input asp-for="FirebaseSetting.ProfileName" class="form-control" />
-                <span asp-validation-for="FirebaseSetting.ProfileName" class="text-danger"></span>
+                <label asp-for="firebasesettingvm.ProfileName" class="control-label"></label>
+                <input asp-for="firebasesettingvm.ProfileName" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.ProfileName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FirebaseSetting.ApplicationID" class="control-label"></label>
-                <input asp-for="FirebaseSetting.ApplicationID" class="form-control" />
-                <span asp-validation-for="FirebaseSetting.ApplicationID" class="text-danger"></span>
+                <label asp-for="firebasesettingvm.ApplicationID" class="control-label"></label>
+                <input asp-for="firebasesettingvm.ApplicationID" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.ApplicationID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FirebaseSetting.SenderID" class="control-label"></label>
-                <input asp-for="FirebaseSetting.SenderID" class="form-control" />
-                <span asp-validation-for="FirebaseSetting.SenderID" class="text-danger"></span>
+                <label asp-for="firebasesettingvm.SenderID" class="control-label"></label>
+                <input asp-for="firebasesettingvm.SenderID" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.SenderID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FirebaseSetting.DeviceID" class="control-label"></label>
-                <input asp-for="FirebaseSetting.DeviceID" class="form-control" />
-                <span asp-validation-for="FirebaseSetting.DeviceID" class="text-danger"></span>
+                <label asp-for="firebasesettingvm.DeviceID" class="control-label"></label>
+                <input asp-for="firebasesettingvm.DeviceID" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.DeviceID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FirebaseSetting.RequestType" class="control-label"></label>
-                <input asp-for="FirebaseSetting.RequestType" class="form-control" />
-                <span asp-validation-for="FirebaseSetting.RequestType" class="text-danger"></span>
+                <label asp-for="firebasesettingvm.RequestType" class="control-label"></label>
+                <input asp-for="firebasesettingvm.RequestType" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.RequestType" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FirebaseSetting.ContentType" class="control-label"></label>
-                <input asp-for="FirebaseSetting.ContentType" class="form-control" />
-                <span asp-validation-for="FirebaseSetting.ContentType" class="text-danger"></span>
+                <label asp-for="firebasesettingvm.ContentType" class="control-label"></label>
+                <input asp-for="firebasesettingvm.ContentType" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.ContentType" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FirebaseSetting.FCMSendUrl" class="control-label"></label>
-                <input asp-for="FirebaseSetting.FCMSendUrl" class="form-control" />
-                <span asp-validation-for="FirebaseSetting.FCMSendUrl" class="text-danger"></span>
+                <label asp-for="firebasesettingvm.FCMSendUrl" class="control-label"></label>
+                <input asp-for="firebasesettingvm.FCMSendUrl" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.FCMSendUrl" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FileUpload.file" class="control-label"></label>
-                <input asp-for="FileUpload.file" type="file" class="form-control" />
-                <span asp-validation-for="FileUpload.file" class="text-danger"></span>
+                <label asp-for="firebasesettingvm.file" class="control-label"></label>
+                <input asp-for="firebasesettingvm.file" type="file" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.file" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

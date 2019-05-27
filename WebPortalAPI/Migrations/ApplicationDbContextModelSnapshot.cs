@@ -197,6 +197,21 @@ namespace WebPortalAPI.Data.Migrations
                     b.ToTable("Dashboards");
                 });
 
+            modelBuilder.Entity("WebPortalAPI.Data.FileUpload", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FileName");
+
+                    b.Property<long>("fileSize");
+
+                    b.HasKey("id");
+
+                    b.ToTable("FileUploads");
+                });
+
             modelBuilder.Entity("WebPortalAPI.Data.FirebaseSetting", b =>
                 {
                     b.Property<int>("ID")
@@ -213,7 +228,7 @@ namespace WebPortalAPI.Data.Migrations
 
                     b.Property<string>("GoogleServicesData");
 
-                    b.Property<long>("GoogleServicesSize");
+                    b.Property<long?>("GoogleServicesSize");
 
                     b.Property<string>("ProfileName");
 

@@ -22,7 +22,17 @@ namespace WebPortalAPI.Areas.Admin.Pages
 
         public async Task OnGetAsync()
         {
-            FirebaseSetting = await _context.FirebaseSettings.ToListAsync();
+         var result  =  _context.FirebaseSettings;
+            if (result.Count()>0)
+            {
+                FirebaseSetting = await result.ToListAsync();
+            }
+            else
+            {
+                FirebaseSetting = null;
+            }
+
+            
         }
     }
 }
