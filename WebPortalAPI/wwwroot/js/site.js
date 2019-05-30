@@ -3,7 +3,7 @@
 
 // Write your JavaScript code.
 $(function () {   
-    $('#header,#body,#detailproduct,#logo ').summernote({
+    $('#header,#body,#detailproduct ').summernote({
         height: 150,   //set editable area's height
         codemirror: { // codemirror options
             theme: 'monokai'

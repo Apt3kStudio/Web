@@ -362,13 +362,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Areas\Admin\Pages\Create.cshtml">
+    <Content Update="Areas\Admin\Pages\FileUploadCreate.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Pages\Delete.cshtml">
+    <Content Update="Areas\Admin\Pages\FileUploadDelete.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Pages\Details.cshtml">
+    <Content Update="Areas\Admin\Pages\FileUploadDetails.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <Content Update="Areas\Admin\Pages\firebaseEdit.cshtml">

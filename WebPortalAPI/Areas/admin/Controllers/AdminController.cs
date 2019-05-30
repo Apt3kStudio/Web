@@ -64,16 +64,18 @@ namespace WebPortalAPI.Areas.admin.Controllers
         {
 
             FileUploadVM f = new FileUploadVM(db, _env);
+            f.file = files.FirstOrDefault();
             f.FileName = files.FirstOrDefault().FileName;
             f.fileSize = files.FirstOrDefault().Length;
             f.Type = (int)Utils.FileType.Logo;
+            f.save();
 
             return RedirectToAction("Index");
         }
         [Route("Dashboard")]
         public ActionResult Dashboard()
         {
-            DashboardVM h = new DashboardVM(db);
+            DashboardVM h = new DashboardVM(db, _mapper);
            
             return View(h);
         }

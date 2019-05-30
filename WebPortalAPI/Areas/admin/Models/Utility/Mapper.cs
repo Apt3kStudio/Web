@@ -13,6 +13,7 @@ namespace WebPortalAPI.Areas.Admin.Models.Utility
         public Mapper()
         {
             CreateMap<FirebaseSetting, FirebaseSettingVM>().ReverseMap();
+            CreateMap<FirebaseSetting, FirebaseSupportService>().ReverseMap();
             CreateMap<FileUpload, FileUploadVM>().ReverseMap();
         }
     }

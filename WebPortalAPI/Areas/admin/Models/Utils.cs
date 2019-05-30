@@ -15,6 +15,11 @@ namespace WebPortalAPI.Areas.Admin.Models
             }
             return content;
         }
+        public string GetFileTypeName(int typeValue)
+        {
+            
+            return Enum.GetName(typeof(FileType), typeValue).ToString();
+        }
        public enum FileType {
             Logo = 0,
             Background = 1,
@@ -22,8 +27,13 @@ namespace WebPortalAPI.Areas.Admin.Models
             PDF = 3,
             IMG = 4,
             PNG = 5,
-            Docx = 6
+            Docx = 6,
+            AppleStore = 7,
+            GooglePlay = 8,
+            WatchFace = 9
         }
+
+        
 
     }
 }
