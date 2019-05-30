@@ -1,0 +1,47 @@
+﻿@page
+@model WebPortalAPI.Areas.Admin.Controllers.IndexModel
+
+<p>
+    <a asp-page="FileUploadCreate">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FileUpload[0].FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileUpload[0].fileSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileUpload[0].Type)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.FileUpload)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fileSize)
+                </td>
+                <td>
+                    @utility.GetFileTypeName(item.Type)
+                </td>
+                <td>
+                    <a asp-page="./FileUploadEdit" asp-route-id="@item.id">Edit</a> |
+                    <a asp-page="./FileUploadDetails" asp-route-id="@item.id">Details</a> |
+                    <a asp-page="./FileUploadDelete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@functions{
+
+    Utils utility = new Utils();
+}

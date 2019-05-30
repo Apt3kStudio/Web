@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using AutoMapper;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +11,7 @@ using WebPortalAPI.Data;
 
 namespace WebPortalAPI.Areas.Admin.Models
 {
-    public class FirebaseSupportSerive
+    public class FirebaseSupportService
     {       
         public string ApplicationID { get; set; }
         public string  SenderID { get; set; }
@@ -23,101 +24,65 @@ namespace WebPortalAPI.Areas.Admin.Models
         public string Title { get; set; }
         public string GoogleServicesFileURL { get; set; }
         WebRequest tRequest;
-        public FirebaseSupportSerive(FirebaseSetting firebaseSetting)
+        Byte[] byteArray;
+        private IMapper _mapper;
+      
+        public FirebaseSupportService(FirebaseSetting firebaseSetting, IMapper mapper)
         {
-            #region needs to be remove
-            //todo Remove only kept for info
-            //ApplicationID = "AIzaSyBOu1oyM6lyHA2niI3THLfZKi7nQML669o";
-            //SenderID = "267006931987";
-            //DeviceID = "/topics/admin";
-            //RequestType = "post";
-            //ContentType = "application/json";
-            //FCMSendUrl = "https://fcm.googleapis.com/fcm/send";
-            //tRequest = WebRequest.Create(FCMSendUrl);
-            //tRequest.Method = RequestType;
-            //tRequest.ContentType = ContentType;
-            #endregion
-            Body = "testbody";
-            Title = "testTitle";
-            InitializeService(firebaseSetting);
+            this._mapper = mapper;           
             MaketheAPICall();
+            var data = new
+            {
+                to = DeviceID,
+                notification = new
+                {
+                    body = Body,
+                    title = Title
+                }
+            };
+            InitializeService(firebaseSetting, data);
         }
-        private void InitializeService(FirebaseSetting firebaseSetting)
+        private void InitializeService(FirebaseSetting firebaseSetting, object data)
         {
-            ApplicationID = firebaseSetting.ApplicationID;
+            this._mapper.Map(firebaseSetting, this);
+            InitWebRequest(firebaseSetting, data);
+        }
 
-            SenderID = firebaseSetting.SenderID;
-
-            DeviceID = firebaseSetting.DeviceID;
-
-            RequestType = firebaseSetting.RequestType;
-
-            ContentType = firebaseSetting.ContentType;
-
-            FCMSendUrl = firebaseSetting.FCMSendUrl;
-
+        private void InitWebRequest(FirebaseSetting firebaseSetting, object data)
+        {
+            var json = JsonConvert.SerializeObject(data);
+            byteArray = Encoding.UTF8.GetBytes(json);
+            tRequest.ContentLength = byteArray.Length;
             tRequest = WebRequest.Create(FCMSendUrl);
-
-            tRequest.Method = RequestType;
-
-            tRequest.ContentType = ContentType;
+            tRequest.Method = firebaseSetting.RequestType;
+            tRequest.ContentType = firebaseSetting.ContentType;
+            tRequest.Headers.Add(string.Format("Authorization: key={0}", ApplicationID));
+            tRequest.Headers.Add(string.Format("Sender: id={0}", SenderID));
         }
         public bool MaketheAPICall() => Send();
         private bool Send()
         {
             try
             {
-                var data = new
-                {
-                    to = DeviceID,
-                    notification = new
-                    {
-                        body = Body,
-                        title = Title
-                    }
-                };
-                // JsonConvert serializer = new JsonConvert();
-
-                var json = JsonConvert.SerializeObject(data);
-
-                Byte[] byteArray = Encoding.UTF8.GetBytes(json);
-
-                tRequest.Headers.Add(string.Format("Authorization: key={0}", ApplicationID));
-
-                tRequest.Headers.Add(string.Format("Sender: id={0}", SenderID));
-
-                tRequest.ContentLength = byteArray.Length;
-
-
                 using (Stream dataStream = tRequest.GetRequestStream())
                 {
-
                     dataStream.Write(byteArray, 0, byteArray.Length);
-
-
                     using (WebResponse tResponse = tRequest.GetResponse())
                     {
-
                         using (Stream dataStreamResponse = tResponse.GetResponseStream())
                         {
-
                             using (StreamReader tReader = new StreamReader(dataStreamResponse))
                             {
-
                                 String sResponseFromServer = tReader.ReadToEnd();
-
                                 string str = sResponseFromServer;
-
                             }
                         }
                     }
                 }
                 return true;
             }
-
             catch (Exception ex)
             {
-
                 string str = ex.Message;
                 return false;
             }

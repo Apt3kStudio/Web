@@ -1,0 +1,36 @@
+﻿@page
+@model WebPortalAPI.Areas.Admin.Controllers.DetailsModel
+
+<div>
+    <h4>FileUpload</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FileUpload.FileName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileUpload.FileName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileUpload.fileSize)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileUpload.fileSize)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileUpload.Type)
+        </dt>
+        <dd>
+            @utility.GetFileTypeName(Model.FileUpload.Type)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./FileUploadEdit" asp-route-id="@Model.FileUpload.id">Edit</a> |
+    <a asp-page="./FileUploadIndex">Back to List</a>
+</div>
+
+@functions{
+
+    Utils utility = new Utils();
+}

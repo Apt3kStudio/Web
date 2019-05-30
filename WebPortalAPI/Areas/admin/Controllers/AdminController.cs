@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WebPortalAPI.Areas.admin.Models;
-using WebPortalAPI.Areas.admin.Models;
 using WebPortalAPI.Areas.Admin.Models;
 using WebPortalAPI.Data;
+using static WebPortalAPI.Areas.Admin.Models.Utils;
 
 namespace WebPortalAPI.Areas.admin.Controllers
 {
@@ -20,9 +23,15 @@ namespace WebPortalAPI.Areas.admin.Controllers
     public class AdminController : Controller
     {
         private ApplicationDbContext db;
-        public AdminController(IServiceProvider serviceProvider)
+        private IHostingEnvironment _env;
+        private IMapper _mapper;
+        private Utils _utils;
+        public AdminController(IServiceProvider serviceProvider, IHostingEnvironment env, IMapper mapper )
         {
             db = serviceProvider.GetRequiredService<ApplicationDbContext>();
+            _env = env;
+            _mapper = mapper;
+            _utils = new Utils();
         }
       
         [Route("LandingPage")]    
@@ -39,14 +48,34 @@ namespace WebPortalAPI.Areas.admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(dash);
-                dash.Update(db);
+
+
+            #region file upload
+
+ 
+            #endregion
+
+            dash.Update(db);
 
             return View(dash);
+        }
+
+        public IActionResult Fileupload(List<IFormFile> files)
+        {
+
+            FileUploadVM f = new FileUploadVM(db, _env);
+            f.file = files.FirstOrDefault();
+            f.FileName = files.FirstOrDefault().FileName;
+            f.fileSize = files.FirstOrDefault().Length;
+            f.Type = (int)Utils.FileType.Logo;
+            f.save();
+
+            return RedirectToAction("Index");
         }
         [Route("Dashboard")]
         public ActionResult Dashboard()
         {
-            DashboardVM h = new DashboardVM(db);
+            DashboardVM h = new DashboardVM(db, _mapper);
            
             return View(h);
         }

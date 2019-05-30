@@ -197,6 +197,23 @@ namespace WebPortalAPI.Data.Migrations
                     b.ToTable("Dashboards");
                 });
 
+            modelBuilder.Entity("WebPortalAPI.Data.FileUpload", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FileName");
+
+                    b.Property<int>("Type");
+
+                    b.Property<long>("fileSize");
+
+                    b.HasKey("id");
+
+                    b.ToTable("FileUploads");
+                });
+
             modelBuilder.Entity("WebPortalAPI.Data.FirebaseSetting", b =>
                 {
                     b.Property<int>("ID")
@@ -213,7 +230,7 @@ namespace WebPortalAPI.Data.Migrations
 
                     b.Property<string>("GoogleServicesData");
 
-                    b.Property<long>("GoogleServicesSize");
+                    b.Property<long?>("GoogleServicesSize");
 
                     b.Property<string>("ProfileName");
 
@@ -232,11 +249,17 @@ namespace WebPortalAPI.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("AppleStore");
+
                     b.Property<string>("Body");
+
+                    b.Property<string>("GooglePlay");
 
                     b.Property<string>("Header");
 
                     b.Property<string>("ProductDetail");
+
+                    b.Property<string>("WatchFace");
 
                     b.Property<string>("logo");
 
