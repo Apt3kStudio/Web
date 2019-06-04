@@ -171,17 +171,19 @@ height:500px;
     color: black;
     padding: 40px;
 }
-#tag{
-    color:red;
-    width:100%;
-    text-align:center;
-    font-size:22px;
+#tag {
+    color: red;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-family: Righteous;
 }
-#title{
-    color:#ffffff;
-    width:100%;
-    text-align:center;
-    font-size:22px;
+#title {
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-family: Righteous;
 }
 .top-section-logo {
     text-align:center;

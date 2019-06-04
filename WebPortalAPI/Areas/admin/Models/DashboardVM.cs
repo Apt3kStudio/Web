@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,10 +15,12 @@ namespace WebPortalAPI.Areas.admin.Models
         public List<FirebaseSetting> firebaseSettings { get; set; }
 
         private ApplicationDbContext db;
+        private IMapper _mapper;
 
-        public DashboardVM(ApplicationDbContext _db)
+        public DashboardVM(ApplicationDbContext _db, IMapper mapper)
         {
             db = _db;
+            _mapper = mapper;
             load();
             firebaseSettings = db.FirebaseSettings.ToList();
             var firebaseSetting = db.FirebaseSettings.FirstOrDefault();
@@ -37,7 +40,8 @@ namespace WebPortalAPI.Areas.admin.Models
         }
         public void TestFirebaseConn(FirebaseSetting model)
         {
-            FirebaseSupportSerive fss = new FirebaseSupportSerive(model);
+            FirebaseSupportService fss = new FirebaseSupportService(model,_mapper);
+           
             
         }
 

@@ -17,6 +17,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using AutoMapper;
 
 namespace WebPortalAPI
 {
@@ -77,7 +78,7 @@ namespace WebPortalAPI
                         #endregion
                     };
                 });
-
+            services.AddAutoMapper(typeof(Startup));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -105,7 +106,7 @@ namespace WebPortalAPI
             app.UseAuthentication();
 
             SeedDatabase.Initialize(app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
-
+          
             app.UseMvc(routes =>
             {
                 #region admin

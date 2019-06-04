@@ -21,6 +21,7 @@ namespace WebPortalAPI.Data
         public DbSet<Dashboard> Dashboards { get; set; }
         public DbSet<LandingPage> LandingPages { get; set; }
         public DbSet<FirebaseSetting> FirebaseSettings { get; set; }
+        public DbSet<FileUpload> FileUploads { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

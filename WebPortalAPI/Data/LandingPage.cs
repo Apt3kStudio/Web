@@ -17,6 +17,9 @@ namespace WebPortalAPI.Data
         public string Body { get; set; }
         public string ProductDetail { get; set; }
         public string logo { get; set; }
+        public string AppleStore { get; set; }
+        public string GooglePlay { get; set; }
+        public string WatchFace { get; set; }
 
     }
 }

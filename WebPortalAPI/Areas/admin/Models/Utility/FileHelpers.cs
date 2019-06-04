@@ -22,7 +22,7 @@ namespace WebPortalAPI.Areas.Admin.Models.Utility
             // name isn't found, error messages simply won't show
             // a display name.
             MemberInfo property =
-                typeof(FileUpload).GetProperty(
+                typeof(FileUploadVM).GetProperty(
                     formFile.Name.Substring(formFile.Name.IndexOf(".") + 1));
 
             if (property != null)
