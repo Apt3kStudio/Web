@@ -5,14 +5,10 @@
     ViewData["Title"] = "Dashboard";
 }
 
-<h1>Dashboard</h1>
-
 <h4>DashboardVM</h4>
 <hr />
 <div class="row">
-    <div class="col-md-6 col-layout outline">
-        @await Html.PartialAsync("FirebaseSettings.cshtml", Model.firebaseSettings)
-       
+    <div class="col-md-6 col-layout outline">              
     </div>
     <div class="col-md-6 col-layout outline right-col-layout">
         <form asp-action="Dashboard">

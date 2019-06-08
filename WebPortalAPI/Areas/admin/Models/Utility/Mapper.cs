@@ -15,6 +15,7 @@ namespace WebPortalAPI.Areas.Admin.Models.Utility
             CreateMap<FirebaseSetting, FirebaseSettingVM>().ReverseMap();
             CreateMap<FirebaseSetting, FirebaseSupportService>().ReverseMap();
             CreateMap<FileUpload, FileUploadVM>().ReverseMap();
+            CreateMap<Dashboard, DashboardVM>().ReverseMap();
         }
     }
 }

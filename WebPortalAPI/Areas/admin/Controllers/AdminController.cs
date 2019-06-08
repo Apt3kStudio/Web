@@ -74,21 +74,19 @@ namespace WebPortalAPI.Areas.admin.Controllers
         }
         [Route("Dashboard")]
         public ActionResult Dashboard()
-        {
-            DashboardVM h = new DashboardVM(db, _mapper);
-           
-            return View(h);
+        {        
+            return View(new DashboardVM(db, _mapper, _env));
         }
 
         [Route("Dashboard")]
         [HttpPost]
-        public ActionResult Dashboard(DashboardVM dash)
+        public ActionResult Dashboard(DashboardVM myDashboard)
         {
             if (!ModelState.IsValid)
-                return View(dash);
-            dash.Update(db);
-
-            return View(dash);
+                return View(myDashboard);
+            myDashboard.Config(db,_mapper,_env);
+            if (myDashboard.doesItExist()){myDashboard.Update();}else{myDashboard.Inser();}         
+            return View(myDashboard);
         }
         [Route("PushEvent")]
         public IActionResult PushEvent()

@@ -30,6 +30,11 @@
       "provider": "cdnjs",
       "library": "codemirror@5.47.0",
       "destination": "wwwroot/lib/codemirror/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "animate.css@3.7.2",
+      "destination": "wwwroot/lib/animate.css/"
     }
   ]
 }
