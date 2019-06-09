@@ -223,3 +223,7 @@ background-color:red!important;
     background-color: #09406d !important;
     z-index:1;
 }
+.devicesareshown {
+    height:50px;
+    background-color:grey;
+}

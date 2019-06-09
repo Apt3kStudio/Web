@@ -35,6 +35,11 @@
       "provider": "cdnjs",
       "library": "animate.css@3.7.2",
       "destination": "wwwroot/lib/animate.css/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables@1.10.19",
+      "destination": "wwwroot/lib/datatables/"
     }
   ]
 }

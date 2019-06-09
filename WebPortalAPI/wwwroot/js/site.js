@@ -9,27 +9,32 @@ $(function () {
             theme: 'monokai'
         }
     });
-
-    animateMenu();
+    animateMenu(true);
+    setDatatable(true);
+    showDevices(true);
 });
 
-
-
-function animateMenu()
+function animateMenu(enable)
 {
-
-    $(".admin-nav-box a").mouseenter(function () {
-        var self = $(this);
-        $(this).addClass("animated").addClass("flipInX"); console.log("In");
-        setTimeout(function () {
-            self.removeClass("flipInX");
-        }, 500);
-    });
-   
-    //$(".admin-nav-box a").mouseleave(function () {
-    //    $(this).removeClass("animated").removeClass("flipInX"); console.log("out");             
-    //}); 
+    if (enable) {
+        $(".admin-nav-box a").mouseenter(function () {
+            var self = $(this);
+            $(this).addClass("animated").addClass("flipInX"); console.log("In");
+            setTimeout(function () {
+                self.removeClass("flipInX");
+            }, 500);
+        });
+    }
 }
+
+function setDatatable(enable)
+{
+    if (enable)
+    {
+        $("#adminusersTable").DataTable();
+    }
+}
+
 
 
 

@@ -13,8 +13,9 @@ namespace WebPortalAPI.Areas.admin.Models
     {
         public string Header { get; set; }
         public string Body { get; set; }
-      
-        private ApplicationDbContext db;
+        public List<AdminUser> AdminUsersList { get; set; }
+
+
         private ApplicationDbContext _db;
         private IMapper _mapper;
         private IHostingEnvironment _env;
@@ -23,6 +24,7 @@ namespace WebPortalAPI.Areas.admin.Models
         {
             Config(db, mapper, env);
             getMyDashboard();
+            loadAdminUsers();
         }        
         /// <summary>
         /// This constructor doesn't set database access, Mapper access or Hosting access. Need to set up configuration method
@@ -39,27 +41,32 @@ namespace WebPortalAPI.Areas.admin.Models
         }
         public List<AdminUser> loadAdminUsers()
         {
+            #region need to refactor code         
             List<AdminUser> AdminUsers = new List<AdminUser>();        
-            AdminUsers.Add(new AdminUser { FirstName = "Dioscar", LastName="Rodriguez" });
-            AdminUsers.Add(new AdminUser { FirstName = "Nelson", LastName = "Vasquez" });
-            AdminUsers.Add(new AdminUser { FirstName = "Dionel", LastName = "Rodriguez" });
-            AdminUsers.Add(new AdminUser { FirstName = "Jonathan", LastName = "Gomez" });
-            return AdminUsers;
+            AdminUsers.Add(new AdminUser { Id = 1, FirstName = "Dioscar", LastName="Rodriguez" });
+            AdminUsers.Add(new AdminUser { Id = 2, FirstName = "Nelson", LastName = "Vasquez" });
+            AdminUsers.Add(new AdminUser { Id = 3, FirstName = "Dionel", LastName = "Rodriguez" });
+            AdminUsers.Add(new AdminUser { Id = 4, FirstName = "Jonathan", LastName = "Gomez" });
+         
+            AdminUsersList = new List<AdminUser>();
+            AdminUsersList = AdminUsers;
+            #endregion
+            return AdminUsersList;
         }
         public void getMyDashboard()
         {
             Dashboard MyDashboard = new Dashboard();
-            _mapper.Map(db.Dashboards.FirstOrDefault(), MyDashboard);            
+            _mapper.Map(_db.Dashboards.FirstOrDefault(), MyDashboard);            
         }
         /// <summary>
         /// This Method Gets the dashboard record from the Database and it updates it with the new changes. 
         /// </summary>
         internal void Update()
         {
-            var dbDashboard = db.Dashboards.FirstOrDefault();
+            var dbDashboard = _db.Dashboards.FirstOrDefault();
             _mapper.Map(this, dbDashboard);
-            db.Dashboards.Update(dbDashboard);
-            db.SaveChanges();                            
+            _db.Dashboards.Update(dbDashboard);
+            _db.SaveChanges();                            
         }
         /// <summary>
         /// This Method Creates a new Dashboard Record in the database.
@@ -68,43 +75,57 @@ namespace WebPortalAPI.Areas.admin.Models
         {
             Dashboard dashInsert = new Dashboard();
             _mapper.Map(this, dashInsert);
-            db.Dashboards.Add(dashInsert);
-            db.SaveChanges();
+            _db.Dashboards.Add(dashInsert);
+            _db.SaveChanges();
         }
 
         internal bool doesItExist()
         {
-            return db.Dashboards.Any();
+            return _db.Dashboards.Any();
         }
     }
+
+
+    #region Prototy Dashboard structor data
     public interface IPerson
     {
         string FirstName { set; get; }
         string LastName { set; get; }
-        string EmailAddress { set; get; }
+        string EmailAddress { set; get; }       
        
-        void SetFirstName(string fisrtName);
     }
     public class AdminUser : IPerson
     {
-       public string FirstName { get ; set; }
+        public int Id { get; set; }
+        public string FirstName { get ; set; }
         public string LastName { get ; set ; }
-        public string EmailAddress { get ; set ; }
-        
-
-        public AdminUser(IPerson person)
+        public string EmailAddress { get ; set ; }       
+        public List<Device> Devices { get; set; }
+        public void getDevices()
         {
-          
-        }
-
-        public AdminUser()
-        {
-            
-        }
-        void IPerson.SetFirstName(string fisrtName)
-        {
-            throw new NotImplementedException();
+            #region refactor to database
+            Devices = new List<Device>();
+            Devices.Add(new Device { Id = 1, Name= "iPhone x", UserId =1  });
+            Devices.Add(new Device { Id = 2, Name = "iPad", UserId = 2 });
+            Devices.Add(new Device { Id = 3, Name = "Moto (Android)", UserId = 3 });
+            Devices.Add(new Device { Id = 4, Name = "Moto TG (Android)", UserId = 2 });
+            Devices.Add(new Device { Id = 5, Name = "iPhone 8", UserId = 1 });
+            Devices.Add(new Device { Id = 6, Name = "Samsung", UserId = 3 });
+            Devices.Add(new Device { Id = 7, Name = "Moto (Android)", UserId = 3 });
+            Devices.Add(new Device { Id = 8, Name = "iPad slim", UserId = 1 });
+            Devices.Add(new Device { Id = 1, Name = "iPhone x", UserId = 4 });
+            Devices.Add(new Device { Id = 2, Name = "iPad", UserId = 2 });        
+            Devices.Add(new Device { Id = 7, Name = "Nokia", UserId = 1 });
+            Devices.Add(new Device { Id = 8, Name = "Android Table", UserId = 4 });
+            #endregion
         }
     }
+    public class Device
+    {
+        public int Id { get; set; }
+        public string  Name { get; set; }
+        public int UserId { get; set; }
+    }
+    #endregion
 
 }
