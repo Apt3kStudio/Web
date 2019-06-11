@@ -1,4 +1,4 @@
-.vs/WebPortalAPI/v16/Server/sqlite3/db.lock
+
 WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs
 WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs
 WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Views/Home/UsersAcount.g.cshtml.cs
@@ -87,12 +87,5 @@ WebPortalAPI/bin/Debug/netcoreapp2.2/WebPortalAPI.dll
 WebPortalAPI/bin/Debug/netcoreapp2.2/WebPortalAPI.Views.pdb
 WebPortalAPI/bin/Debug/netcoreapp2.2/WebPortalAPI.Views.dll
 WebPortalAPI/obj/
-<<<<<<< HEAD
-.vs/WebPortalAPI/v16/Server/sqlite3/storage.ide
-.vs/WebPortalAPI/v16/.suo
-.vs/WebPortalAPI/DesignTimeBuild/.dtbcache
-=======
->>>>>>> a61ad3c1138e41a214e00458188934389ae40133
-.vs/WebPortalAPI/v16/Server/sqlite3/storage.ide-wal
-.vs/WebPortalAPI/v16/Server/sqlite3/storage.ide-shm
-.vs/WebPortalAPI/v16/Server/sqlite3/storage.ide~feature_Summernote2
+
+.vs/WebPortalAPI/v16/Server/sqlite3/db.lock
