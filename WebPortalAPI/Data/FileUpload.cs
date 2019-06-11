@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using WebPortalAPI.Areas.Admin.Models;
 
 namespace WebPortalAPI.Data
 {
@@ -16,5 +17,9 @@ namespace WebPortalAPI.Data
         public long fileSize { get; set; }
         public int Type { get; set; }
 
+        public static implicit operator FileUpload(FileUploadVM v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

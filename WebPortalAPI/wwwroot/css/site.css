@@ -203,12 +203,33 @@ height:500px;
     height:70px;
 
 }
-/*.navbar-center {
-background-color:red!important;
+.product-details {
+    color: #fff;
+    font-family: Righteous;
+    font-size: 50px;
+    font-weight:600;
 }
-.navbar-right {
-    background-color: green!important;
-}*/
+.product-detail-red {
+    color: #fff;
+    font-family: Righteous;
+    font-size: 50px;
+    background-color: red;
+    height:200px;
+    margin: 0px 100px 100px 100px;
+    width:80%;
+}
+.pt10{
+    padding-top:10px;
+}
+.btn-blue {
+    background-color: #01224b;
+    border-color: #01224b !important;
+    color:#fff;
+}
+.btn:hover, .btn:focus, .btn.focus {
+    color: #fff;
+    text-decoration: underline;
+}
 .admin-nav-box {
     background-color: #153148!important;
     -webkit-box-shadow: -1px 3px 4px -2px rgba(0, 0, 0, 0.14);

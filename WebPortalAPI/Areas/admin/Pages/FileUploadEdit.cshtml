@@ -5,23 +5,21 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="FileUpload.id" />
+            <input type="hidden" asp-for="fileuploadVM.id" />
             <div class="form-group">
-                <label asp-for="FileUpload.FileName" class="control-label"></label>
-                <input asp-for="FileUpload.FileName" class="form-control" />
-                <span asp-validation-for="FileUpload.FileName" class="text-danger"></span>
+                <input asp-for="files" type="file" class="form-control" multiple />
             </div>
             <div class="form-group">
-                <label asp-for="FileUpload.fileSize" class="control-label"></label>
-                <input asp-for="FileUpload.fileSize" class="form-control" />
-                <span asp-validation-for="FileUpload.fileSize" class="text-danger"></span>
+                <label asp-for="fileuploadVM.fileSize" class="control-label"></label>
+                @Model.fileuploadVM.fileSize
+                <span asp-validation-for="fileuploadVM.fileSize" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FileUpload.Type" class="control-label"></label>
-                <input asp-for="FileUpload.Type" class="form-control" />
-                <span asp-validation-for="FileUpload.Type" class="text-danger"></span>
+                <select asp-for="fileuploadVM.Type" class="form-control" asp-items="Model.fileuploadVM.logosTypes">
+                    <option>Select Logo</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

@@ -38,7 +38,9 @@ namespace WebPortalAPI.Areas.admin.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            LandingPageVM h = new LandingPageVM(db);
+            LandingPageVM h = new LandingPageVM();
+            h.Init(db,_mapper,_env);
+            h.load();
             return View(h);
         }
         
@@ -46,17 +48,23 @@ namespace WebPortalAPI.Areas.admin.Controllers
         [HttpPost]
         public ActionResult Index(Models.LandingPageVM dash)
         {
+            dash.Init(db, _mapper, _env);
             if (!ModelState.IsValid)
                 return View(dash);
-
-
             #region file upload
 
- 
+
             #endregion
 
-            dash.Update(db);
-
+            if (db.LandingPages.FirstOrDefault() != null)
+            {
+                dash.Update();
+            }
+            else
+            {
+                dash.Insert();
+            }
+            dash.load();
             return View(dash);
         }
 
