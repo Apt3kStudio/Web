@@ -383,10 +383,13 @@
     <Content Update="Areas\Admin\Views\Shared\Error.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Areas\Admin\Views\Shared\Templates\RadarGraph.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Areas\Admin\Views\Shared\_CookieConsentPartial.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Areas\Admin\Views\Shared\Devices.cshtml">
+    <Content Update="Areas\Admin\Views\Shared\Templates\Devices.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Areas\Admin\Views\Shared\_Layout.cshtml">

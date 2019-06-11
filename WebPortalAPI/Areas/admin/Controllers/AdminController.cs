@@ -95,7 +95,12 @@ namespace WebPortalAPI.Areas.admin.Controllers
             AdminUser au = new AdminUser();
             au.getDevices();
             au.Devices = au.Devices.Where(d => d.UserId == userID).ToList();
-            return PartialView(au);
+            return PartialView("Templates/Devices", au);
+        }
+        [Route("RadarGraph")]
+        public ActionResult RadarGraph()
+        {
+            return PartialView("Templates/RadarGraph");
         }
         [Route("PushEvent")]
         public IActionResult PushEvent()

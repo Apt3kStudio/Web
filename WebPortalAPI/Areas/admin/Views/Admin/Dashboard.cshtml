@@ -5,10 +5,14 @@
     ViewData["Title"] = "Dashboard";
 }
 
-<h4>DashboardVM</h4>
-<hr />
+<div class="row ">
+    <div class="col-sm-12 firebaseContentHeader box-Shadow-light">
+        <h1>Dashboard</h1>
+    </div>
+</div>
+
 <div class="row">
-    <div class="col-md-6 col-layout outline">              
+    <div class="col-md-6 col-layout outline">
         <div class="row">
             <table id="adminusersTable">
                 <thead>
@@ -22,7 +26,7 @@
                     @{
                         foreach (AdminUser adminUser in Model.AdminUsersList)
                         {
-                            <tr>
+                            <tr class="user-tr-row">
                                 <td data-userID="@adminUser.Id">@adminUser.FirstName @adminUser.LastName </td>
                                 <td>@adminUser.EmailAddress</td>
                                 <td>DevicesList</td>
@@ -32,69 +36,65 @@
                     }
                 </tbody>
             </table>
-                </div>
-    
+        </div>
+
     </div>
     <div class="col-md-6 col-layout outline right-col-layout">
-        <form asp-action="Dashboard">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Header" class="control-label"></label>
-                <input asp-for="Header" class="form-control" />
-                <span asp-validation-for="Header" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Body" class="control-label"></label>
-                <input asp-for="Body" class="form-control" />
-                <span asp-validation-for="Body" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        <div id="radar-graph"></div>
     </div>
 </div>
 
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
+<script src="~/lib/jquery/dist/jquery.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        debugger;
-            showDevices(true);
-    });
 
-    function showDevices(enable)
-    {
-        if (enable)
-        {
-            $("#adminusersTable tr td:nth-child(1)").on("click", function (e)
-            {                    
-                var self = $(this);
-                debugger;
-                var UserID = self.data("userid");
-                var tr = $(this).closest("tr");
-                if ($(tr).next().hasClass("devicesareshown"))
-                {
-                    $($(tr).next()).remove();
-                }
-                else
-                {
-                    var DevicesTR = "<tr class='devicesareshown'><td colspan='3' class='devicesareshowntd'></td></tr>";
-                    $(DevicesTR).insertAfter(tr);
+$(document).ready(function () {
+    debugger;
+    showDevices(true);
+    showRadarGraph(true);
 
-                    $.get('@Url.Action("Devices", "Admin", new { area = "Admin" })?userID='+UserID, function (data) {
-                        debugger;
-                        $('.devicesareshowntd').html(data);
-                    }); 
+});
+
+
+        function showDevices(enable) {
+            if (enable) {
+                $("#adminusersTable tr td:nth-child(1)").on("click", function (e) {
+                    var self = $(this);
+                    debugger;
+                    var UserID = self.data("userid");
+                    var tr = $(this).closest("tr");
+                    if ($(tr).next().hasClass("devicesareshown")) {
+                        $($(tr).next()).remove();
                     }
-                if ($(tr).hasClass("devicesareshown")) {
-                    return;
-                }
-          
-            });
+                    else {
+                        var DevicesTR = "<tr class='devicesareshown animated fadeIn'><td colspan='3' class='devicesareshowntd'></td></tr>";
+                        $(DevicesTR).insertAfter(tr);
+
+                        $.get('@Url.Action("Devices", "Admin", new { area = "Admin" })?userID=' + UserID, function (data) {
+                            debugger;
+                            $('.devicesareshowntd').html(data);
+                        });
+                    }
+                    if ($(tr).hasClass("devicesareshown")) {
+                        return;
+                    }
+
+                });
+            }
         }
-    }
+        function showRadarGraph(enable) {
+            if (enable) {
+                debugger;
+                $.get('@Url.Action("RadarGraph", "Admin", new { area = "Admin" })', function (data) {
+                    debugger;
+                    $('#radar-graph').html(data);
+                });
+            }
+            }
+
+
+
 
 </script>

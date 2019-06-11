@@ -20,6 +20,7 @@
         <link href="~/lib/datatables/css/dataTables.semanticui.min.css" rel="stylesheet" />
         <link href="~/lib/datatables/css/dataTables.uikit.min.css" rel="stylesheet" />
         <link href="~/lib/datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="~/lib/Chart.js/Chart.css" rel="stylesheet" />
 
     </environment>
     <environment exclude="Development">
@@ -39,6 +40,7 @@
         <link href="~/lib/datatables/css/dataTables.semanticui.min.css" rel="stylesheet" />
         <link href="~/lib/datatables/css/dataTables.uikit.min.css" rel="stylesheet" />
         <link href="~/lib/datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="~/lib/Chart.js/Chart.css" rel="stylesheet" />
 
     </environment>
 </head>
@@ -94,7 +96,7 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+
         <script src="~/js/ckeditor/ckeditor.js"></script>
         <script src="~/js/summernote/summernote.js"></script>
         <script src="~/lib/codemirror/codemirror.js"></script>
@@ -103,15 +105,17 @@
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
 
+        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.bootstrap.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.dataTables.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.foundation.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.jqueryui.min.js"></script>
-        <script src="~/lib/datatables/js/dataTables.semanticui.min.js"></script>
-        <script src="~/lib/datatables/js/dataTables.uikit.min.js"></script>
-        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+        @*<script src="~/lib/datatables/js/dataTables.semanticui.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.uikit.min.js"></script>*@
 
+        <script src="~/lib/Chart.js/Chart.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
@@ -126,7 +130,7 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+
         <script src="~/js/ckeditor/ckeditor.js" asp-append-version="true"></script>
         <script src="~/js/summernote/summernote.js"></script>
         <script src="~/lib/codemirror/codemirror.js"></script>
@@ -136,15 +140,17 @@
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
 
+        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.bootstrap.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.dataTables.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.foundation.min.js"></script>
         <script src="~/lib/datatables/js/dataTables.jqueryui.min.js"></script>
-        <script src="~/lib/datatables/js/dataTables.semanticui.min.js"></script>
-        <script src="~/lib/datatables/js/dataTables.uikit.min.js"></script>
-        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
-
+        @*<script src="~/lib/datatables/js/dataTables.semanticui.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.uikit.min.js"></script>*@
+        
+        <script src="~/lib/Chart.js/Chart.js"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
   
     @RenderSection("Scripts", required: false)

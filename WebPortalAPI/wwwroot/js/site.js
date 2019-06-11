@@ -11,7 +11,6 @@ $(function () {
     });
     animateMenu(true);
     setDatatable(true);
-    showDevices(true);
 });
 
 function animateMenu(enable)

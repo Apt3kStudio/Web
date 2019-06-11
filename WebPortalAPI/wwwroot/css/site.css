@@ -55,7 +55,7 @@ height:640px;
 
 }
 .right-col-layout {
-    background-color: gray;
+    background-color: white;
 }
 
 .firebaseContentHeader {
@@ -226,4 +226,34 @@ background-color:red!important;
 .devicesareshown {
     height:50px;
     background-color:grey;
+}
+
+.devicesareshowntd {
+    background-color: #153148;
+    color: white;
+    padding-left: 5px;
+    border-bottom: 10px solid #394959;
+    border-right: 10px solid slategrey;
+    border-top: 10px solid #3a5165;
+    border-left: 10px solid #a19a9b;
+}
+.phone-controller-triggers {padding:10px;border-top: 1px solid white;}
+.phone-controller-triggers button {
+   color: #da1f43;
+   font-weight: bold;
+}
+.user-tr-row
+{
+    background-color: #20374a!important;
+    color: white;
+    font-weight: bold;
+}
+.user-tr-row td {
+    border-bottom: 1px solid #ffffff;
+    /* margin-bottom: 10px!important; */
+    /* height: 20px; */
+}
+#adminusersTable_wrapper {
+    height: 700px;   
+    overflow-y: scroll;
 }

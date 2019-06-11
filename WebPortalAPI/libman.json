@@ -41,5 +41,11 @@
       "library": "datatables@1.10.19",
       "destination": "wwwroot/lib/datatables/"
     }
-  ]
+  ,
+{
+  "provider": "cdnjs",
+  "library": "Chart.js@2.8.0",
+  "destination": "wwwroot/lib/Chart.js/"
+}
+]
 }

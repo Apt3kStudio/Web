@@ -1,0 +1,21 @@
+﻿@model WebPortalAPI.Areas.admin.Models.AdminUser
+
+<div class="row">
+    <div class="col-sm-12">
+        @foreach (Device device in Model.Devices)
+        {
+            <div>@device.Name</div>
+            <div class="phone-controller-triggers">
+                <div>
+                    Let us find your @device.Name , choose an option!
+                </div>
+                <div>
+                    <button class="btn btn-default btn-sm">Vibrate</button>
+                    <button class="btn btn-default btn-sm">Alarm</button>
+                    <button class="btn btn-default btn-sm">Flash</button>
+                </div>
+            </div>
+                <hr />
+        }
+    </div>
+</div>
