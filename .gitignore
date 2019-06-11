@@ -29,7 +29,6 @@ WebPortalAPI/obj/Debug/netcoreapp2.1/Razor/Views/Home/SendVibration.g.cshtml.cs
 WebPortalAPI/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
 WebPortalAPI/obj/Debug/netcoreapp2.1/Razor/Areas/admin/Views/_ViewImports.g.cshtml.cs
 WebPortalAPI/bin/Debug/netcoreapp2.2/WebPortalAPI.runtimeconfig.dev.json
-WebPortalAPI/bin/Debug/netcoreapp2.2/WebPortalAPI.deps.json
 WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/Account/Manage/PersonalData.g.cshtml.cs
 WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/Account/Manage/Index.g.cshtml.cs
 WebPortalAPI/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.g.cshtml.cs
