@@ -72,14 +72,14 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
         <script src="~/js/ckeditor/ckeditor.js"></script>
         <script src="~/js/summernote/summernote.js"></script>
         <script src="~/lib/codemirror/codemirror.js"></script>
-        
-        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">        
+
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
 
 
     </environment>
@@ -96,7 +96,6 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
         <script src="~/js/ckeditor/ckeditor.js" asp-append-version="true"></script>
         <script src="~/js/summernote/summernote.js"></script>
         <script src="~/lib/codemirror/codemirror.js"></script>
@@ -104,9 +103,10 @@
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
 
     </environment>
-  
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -16,13 +18,17 @@ namespace WebPortalAPI.Controllers
     
     public class HomeController : Controller
     {
+        private ApplicationDbContext db;
+        private IHostingEnvironment _env;
+        private IMapper _mapper;
         private UserManager<ApplicationUser> userManager;
         private RoleManager<ApplicationRole> roleManager;
-        private ApplicationDbContext db;
        
-        public HomeController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, IServiceProvider serviceProvider)
+        public HomeController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, IServiceProvider serviceProvider, IHostingEnvironment env, IMapper mapper)
         {
             db = serviceProvider.GetRequiredService<ApplicationDbContext>();
+            _env = env;
+            _mapper = mapper;
             this.roleManager = roleManager;
             this.userManager = userManager;
         }
@@ -30,7 +36,7 @@ namespace WebPortalAPI.Controllers
         public IActionResult Index()
         {
             ViewData["Title"] = "";
-            LandingPageVM h = new LandingPageVM(db);
+            LandingPageVM h = new LandingPageVM(db, _mapper, _env);
             return View(h);
         }
         [HttpPost]

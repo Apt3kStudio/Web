@@ -2,40 +2,55 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using WebPortalAPI.Areas.Admin.Models;
 using WebPortalAPI.Data;
 
 namespace WebPortalAPI.Areas.Admin.Controllers
 {
     public class EditModel : PageModel
     {
+        
+        public List<IFormFile> files { get; set; }
+        private IHostingEnvironment _env;
+        private IMapper _mapper;
         private readonly WebPortalAPI.Data.ApplicationDbContext _context;
+        [BindProperty]
+        public FileUploadVM fileuploadVM { get; set; }
 
-        public EditModel(WebPortalAPI.Data.ApplicationDbContext context)
+        public EditModel(WebPortalAPI.Data.ApplicationDbContext context, IHostingEnvironment env, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
+            _env = env;
+            fileuploadVM = new FileUploadVM(_context, _env);
         }
 
-        [BindProperty]
-        public FileUpload FileUpload { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            FileUpload fu = new FileUpload();
+
             if (id == null)
             {
                 return NotFound();
             }
+            fu = await _context.FileUploads.FirstOrDefaultAsync(m => m.id == id);
 
-            FileUpload = await _context.FileUploads.FirstOrDefaultAsync(m => m.id == id);
-
-            if (FileUpload == null)
+            if (fileuploadVM == null)
             {
                 return NotFound();
             }
-            return Page();
+            fileuploadVM.getLogoTypes();
+            //fileuploadVM.FileName =  fu.FileName;
+            _mapper.Map(fu, fileuploadVM);
+           return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -44,8 +59,13 @@ namespace WebPortalAPI.Areas.Admin.Controllers
             {
                 return Page();
             }
+            fileuploadVM.file = files.FirstOrDefault();
+            fileuploadVM.FileName = files.FirstOrDefault().FileName;
+            fileuploadVM.fileSize = files.FirstOrDefault().Length;
+            fileuploadVM.Type = fileuploadVM.Type;
+            fileuploadVM.save();
 
-            _context.Attach(FileUpload).State = EntityState.Modified;
+            _context.Attach(fileuploadVM).State = EntityState.Modified;
 
             try
             {
@@ -53,7 +73,7 @@ namespace WebPortalAPI.Areas.Admin.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!FileUploadExists(FileUpload.id))
+                if (!FileUploadExists(fileuploadVM.id))
                 {
                     return NotFound();
                 }

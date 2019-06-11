@@ -17,14 +17,32 @@
     <div class="col-sm-12 form-inline feature-icon-container outline"><img src="~/images/Mask Group 1.png" /> <img src="~/images/Mask Group 3.png" /> <img src="~/images/Mask Group 2.png" /></div>
 </div>
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6" style="padding:2% 0% 8% 8%;">
         <p class="">@Html.Raw(Model.Body)</p>
+    </div>
+    <div class="col-sm-6" style="padding:2% 15% 2% 15%">
+        <img src="~/images/@(Model.WatchFace)" style="height: 337px;width: 464px;" />
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-12">
-        <p class="">@Html.Raw(Model.ProductDetail)</p>
-    </div>
+    
 </div>
 <div class="row" style="background-image:url('/images/Background3@2x.png');background-size: auto;height:495px;height: 495px;background-size: 100% 100%;background-repeat: no-repeat;">
+    <div class="row">
+        <div class="col-sm-12">
+            <center><p class="product-details">@Html.Raw(Model.ProductDetail)</p></center>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="product-detail-red">
+            <div class="col-md-12">
+                <input type="text" class="form-control" placeholder="Email Adress" />
+            </div>
+
+            <div class="col-md-12 pt10">
+                <input type="submit" class="btn btn-block btn-blue" value="Subscribe" />
+            </div>
+        </div>
+    </div>
 </div>
