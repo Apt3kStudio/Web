@@ -9,10 +9,32 @@ $(function () {
             theme: 'monokai'
         }
     });
-    //CKEDITOR.replace("header"); 
-    //CKEDITOR.replace("body");  
-    //CKEDITOR.replace("detailproduct");  
-    //CKEDITOR.replace("logo");  
-    //console.log("site.js is connected");
-     
+    animateMenu(true);
+    setDatatable(true);
+    showDevices(true);
 });
+
+function animateMenu(enable)
+{
+    if (enable) {
+        $(".admin-nav-box a").mouseenter(function () {
+            var self = $(this);
+            $(this).addClass("animated").addClass("flipInX"); console.log("In");
+            setTimeout(function () {
+                self.removeClass("flipInX");
+            }, 500);
+        });
+    }
+}
+
+function setDatatable(enable)
+{
+    if (enable)
+    {
+        $("#adminusersTable").DataTable();
+    }
+}
+
+
+
+

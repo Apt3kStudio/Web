@@ -5,14 +5,35 @@
     ViewData["Title"] = "Dashboard";
 }
 
-<h1>Dashboard</h1>
-
 <h4>DashboardVM</h4>
 <hr />
 <div class="row">
-    <div class="col-md-6 col-layout outline">
-        @await Html.PartialAsync("FirebaseSettings.cshtml", Model.firebaseSettings)
-       
+    <div class="col-md-6 col-layout outline">              
+        <div class="row">
+            <table id="adminusersTable">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Email</td>
+                        <td>Devices</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (AdminUser adminUser in Model.AdminUsersList)
+                        {
+                            <tr>
+                                <td data-userID="@adminUser.Id">@adminUser.FirstName @adminUser.LastName </td>
+                                <td>@adminUser.EmailAddress</td>
+                                <td>DevicesList</td>
+                            </tr>
+
+                        }
+                    }
+                </tbody>
+            </table>
+                </div>
+    
     </div>
     <div class="col-md-6 col-layout outline right-col-layout">
         <form asp-action="Dashboard">
@@ -38,3 +59,42 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        debugger;
+            showDevices(true);
+    });
+
+    function showDevices(enable)
+    {
+        if (enable)
+        {
+            $("#adminusersTable tr td:nth-child(1)").on("click", function (e)
+            {                    
+                var self = $(this);
+                debugger;
+                var UserID = self.data("userid");
+                var tr = $(this).closest("tr");
+                if ($(tr).next().hasClass("devicesareshown"))
+                {
+                    $($(tr).next()).remove();
+                }
+                else
+                {
+                    var DevicesTR = "<tr class='devicesareshown'><td colspan='3' class='devicesareshowntd'></td></tr>";
+                    $(DevicesTR).insertAfter(tr);
+
+                    $.get('@Url.Action("Devices", "Admin", new { area = "Admin" })?userID='+UserID, function (data) {
+                        debugger;
+                        $('.devicesareshowntd').html(data);
+                    }); 
+                    }
+                if ($(tr).hasClass("devicesareshown")) {
+                    return;
+                }
+          
+            });
+        }
+    }
+
+</script>

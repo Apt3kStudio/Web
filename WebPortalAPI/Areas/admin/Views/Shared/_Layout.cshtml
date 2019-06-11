@@ -10,6 +10,17 @@
         <link rel="stylesheet" href="~/css/site.css" />
         <link href="~/js/summernote/summernote.css" rel="stylesheet" />
         <link href="~/lib/codemirror/codemirror.css" rel="stylesheet" />
+        <link href="~/lib/animate.css/animate.min.css" rel="stylesheet" />
+
+
+        <link href="~/lib/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.foundation.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.semanticui.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.uikit.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -18,11 +29,22 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         <link href="~/js/summernote/summernote.css" rel="stylesheet" />
         <link href="~/lib/codemirror/codemirror.css" rel="stylesheet" />
+        <link href="~/lib/animate.css/animate.min.css" rel="stylesheet" />
+
+
+        <link href="~/lib/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.foundation.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.semanticui.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/dataTables.uikit.min.css" rel="stylesheet" />
+        <link href="~/lib/datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
     </environment>
 </head>
 <body>
     <nav class="navbar navbar navbar-fixed-top">
-        <div class="container">
+        <div class="container admin-nav-box">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -39,19 +61,19 @@
 
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-center">
 
                     @if (User.IsInRole("admin"))
                     {
-                        <li><a asp-area="Admin" asp-controller="Admin" asp-action="Index">Landing Page</a></li>
-                        <li><a asp-area="Admin" asp-controller="Admin" asp-action="Dashboard">Dashboard</a></li>
-                        <li><a asp-page="/FileUploadIndex">File Upload</a></li>
-                        <li><a asp-page="/firebaseIndex">Firebase Settings</a></li>
-                        <li>
+                        <li class="effectme"><a asp-area="Admin" asp-controller="Admin" asp-action="Index">Landing Page</a></li>
+                        <li class="effectme"><a asp-area="Admin" asp-controller="Admin" asp-action="Dashboard">Dashboard</a></li>
+                        <li class="effectme"><a asp-page="/FileUploadIndex">File Upload</a></li>
+                        <li class="effectme"><a asp-page="/firebaseIndex">Firebase Settings</a></li>
+                        <li class="effectme">
                             @Html.ActionLink("PushEvent", "PushEvent", "Admin",
                                               new { area = "Admin" })
                         </li>
-                        <li><a asp-area="Admin" asp-controller="Admin" asp-action="UsersAcount">Users Account</a></li>
+                        <li class="effectme"><a asp-area="Admin" asp-controller="Admin" asp-action="UsersAcount">Users Account</a></li>
                     }
                 </ul>
                 <partial asp-area="Admin" name="_LoginPartial" />
@@ -81,6 +103,14 @@
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
 
+        <script src="~/lib/datatables/js/dataTables.bootstrap.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.dataTables.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.foundation.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.jqueryui.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.semanticui.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.uikit.min.js"></script>
+        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
 
     </environment>
     <environment exclude="Development">
@@ -100,10 +130,20 @@
         <script src="~/js/summernote/summernote.js"></script>
         <script src="~/lib/codemirror/codemirror.js"></script>
 
+
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+        <script src="~/lib/datatables/js/dataTables.bootstrap.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.dataTables.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.foundation.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.jqueryui.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.semanticui.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.uikit.min.js"></script>
+        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
 
     </environment>
 

@@ -18,6 +18,7 @@ namespace WebPortalAPI.Areas.Admin.Models.Utility
             CreateMap<FileUpload, FileUploadVM>().ReverseMap();
             CreateMap<LandingPage, Areas.admin.Models.LandingPageVM>().ReverseMap();
             CreateMap<LandingPage, WebPortalAPI.Models.LandingPageVM>().ReverseMap();
+            CreateMap<Dashboard, DashboardVM>().ReverseMap();
         }
     }
 }
