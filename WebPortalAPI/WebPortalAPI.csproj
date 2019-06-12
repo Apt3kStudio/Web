@@ -14,6 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\admin\Models\IPerson.cs" />
+    <Compile Remove="Areas\admin\Models\IPersonx.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.0" />
     <PackageReference Include="CKEditor" Version="3.6.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />

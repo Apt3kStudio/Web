@@ -18,7 +18,7 @@ namespace WebPortalAPI.Areas.Admin.Controllers
         {
             _context = context;
 
-            CrimeDepartment crime = new CrimeDepartment();
+            //CrimeDepartment crime = new CrimeDepartment();
            
         }
 

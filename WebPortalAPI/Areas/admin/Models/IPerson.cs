@@ -85,7 +85,6 @@ namespace WebPortalAPI.Areas.admin.Models
         }
     }
     public class Victim : IPerson
-    {
    
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
