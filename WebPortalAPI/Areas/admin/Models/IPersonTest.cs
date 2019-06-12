@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebPortalAPI.Areas.admin.Models
 {
-    public interface IPerson
+    public interface IPersonTest
     {
         string First_Name { get; set; }
         string Last_Name { get; set; }
@@ -15,7 +15,7 @@ namespace WebPortalAPI.Areas.admin.Models
         int GetAge();
     }
 
-    public class Police : IPerson
+    public class Police : IPersonTest
     {
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
@@ -84,7 +84,7 @@ namespace WebPortalAPI.Areas.admin.Models
             witness = new List<Witness>();
         }
     }
-    public class Victim : IPerson
+    public class Victim : IPersonTest
     {
    
         public string First_Name { get; set; }
@@ -101,7 +101,7 @@ namespace WebPortalAPI.Areas.admin.Models
 
         }
     }
-    public class Witness: IPerson
+    public class Witness: IPersonTest
     {
         public string First_Name { get; set; }
         public string Last_Name { get; set; }

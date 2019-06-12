@@ -101,6 +101,12 @@ namespace WebPortalAPI.Areas.admin.Models
         public string LastName { get ; set ; }
         public string EmailAddress { get ; set ; }       
         public List<Device> Devices { get; set; }
+       
+        public int GetAge()
+        {
+            throw new NotImplementedException();
+        }
+
         public void getDevices()
         {
             #region refactor to database
@@ -118,6 +124,11 @@ namespace WebPortalAPI.Areas.admin.Models
             Devices.Add(new Device { Id = 7, Name = "Nokia", UserId = 1 });
             Devices.Add(new Device { Id = 8, Name = "Android Table", UserId = 4 });
             #endregion
+        }
+
+        public string GetFullName()
+        {
+            throw new NotImplementedException();
         }
     }
     public class Device

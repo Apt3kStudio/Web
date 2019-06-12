@@ -59,7 +59,7 @@ height:640px;
 }
 
 .firebaseContentHeader {
-    margin-top:50px;
+    
     height: 100px;
     background-color: #db1f43;
     text-align: center;
@@ -250,8 +250,8 @@ height:500px;
 }
 
 .devicesareshowntd {
-    background-color: #153148;
-    color: white;
+    background-color: #ffffff;
+    color: #153148;
     padding-left: 5px;
     border-bottom: 10px solid #394959;
     border-right: 10px solid slategrey;
@@ -275,6 +275,81 @@ height:500px;
     /* height: 20px; */
 }
 #adminusersTable_wrapper {
-    height: 700px;   
-    overflow-y: scroll;
+    height: 600px;
+    margin-left: 0px;
+}
+
+.fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix.ui-corner-tl.ui-corner-tr {
+    height: 55px;
+    /* border: 1px solid black; */
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 4px -3px rgb(101, 98, 98);
+    background-color: #153148;
+}
+#adminusersTable_wrapper thead {
+    background-color: #586f82;
+    color: white;
+}
+.fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix.ui-corner-bl.ui-corner-br {
+    /* border: 1px solid red; */
+    background-color: #586f82;
+    /* color: white; */
+    height: 55px;
+}
+#adminusersTable {
+    height: 500px;
+    width: 99.9% !important;
+    margin-left: 6px !important;
+}
+.newDivAdminusersTable {
+    height: 550px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    padding-right: 10px;
+    background-color: #0c273d;
+}
+/* width */
+.newDivAdminusersTable::-webkit-scrollbar {
+        width: 10px;
+    }
+
+/* Track */
+.newDivAdminusersTable::-webkit-scrollbar-track {
+        background: #ffffff00;
+    }
+
+/* Handle */
+.newDivAdminusersTable::-webkit-scrollbar-thumb {
+        background: white;
+        border-radius: 6px;
+        border-right: 0.5px dashed lightgrey;
+    }
+
+    /* Handle on hover */
+    .newDivAdminusersTable::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+    }
+.dataTables_info {
+color:white!important;
+
+}
+.fg-button.ui-button.ui-state-default.previous.ui-state-disabled {
+    color: white !important;
+}
+.fg-button.ui-button.ui-state-default.next.ui-state-disabled {
+    color: white !important;
+}
+.fg-button.ui-button.ui-state-default.ui-state-disabled {
+    color: white !important;
+}
+.footer {
+    background-color: #153148;
+    height: 40px;
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px;
+    -webkit-box-shadow: 0px 4px 4px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 4px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 4px -3px rgba(0,0,0,0.75);
 }

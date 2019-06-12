@@ -1,8 +1,9 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #3a5165;
 }
 
 /* Wrapping element */
@@ -10,6 +11,7 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color:white;
 }
 
 /* Carousel */
@@ -53,7 +55,7 @@ height:640px;
 
 }
 .right-col-layout {
-    background-color: gray;
+    background-color: white;
 }
 
 .firebaseContentHeader {
@@ -200,4 +202,79 @@ height:500px;
     font-size:70px;
     height:70px;
 
+}
+.product-details {
+    color: #fff;
+    font-family: Righteous;
+    font-size: 50px;
+    font-weight:600;
+}
+.product-detail-red {
+    color: #fff;
+    font-family: Righteous;
+    font-size: 50px;
+    background-color: red;
+    height:200px;
+    margin: 0px 100px 100px 100px;
+    width:80%;
+}
+.pt10{
+    padding-top:10px;
+}
+.btn-blue {
+    background-color: #01224b;
+    border-color: #01224b !important;
+    color:#fff;
+}
+.btn:hover, .btn:focus, .btn.focus {
+    color: #fff;
+    text-decoration: underline;
+}
+.admin-nav-box {
+    background-color: #153148!important;
+    -webkit-box-shadow: -1px 3px 4px -2px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: -1px 3px 4px -2px rgba(0, 0, 0, 0.14);
+    box-shadow: -1px 3px 4px -2px rgba(0, 0, 0, 0.14);
+}
+.admin-nav-box a {
+    color: white;
+}
+
+.navbar-center > li :hover {
+    background-color: #09406d !important;
+    z-index:1;
+}
+.devicesareshown {
+    height:50px;
+    background-color:grey;
+}
+
+.devicesareshowntd {
+    background-color: #153148;
+    color: white;
+    padding-left: 5px;
+    border-bottom: 10px solid #394959;
+    border-right: 10px solid slategrey;
+    border-top: 10px solid #3a5165;
+    border-left: 10px solid #a19a9b;
+}
+.phone-controller-triggers {padding:10px;border-top: 1px solid white;}
+.phone-controller-triggers button {
+   color: #da1f43;
+   font-weight: bold;
+}
+.user-tr-row
+{
+    background-color: #20374a!important;
+    color: white;
+    font-weight: bold;
+}
+.user-tr-row td {
+    border-bottom: 1px solid #ffffff;
+    /* margin-bottom: 10px!important; */
+    /* height: 20px; */
+}
+#adminusersTable_wrapper {
+    height: 700px;   
+    overflow-y: scroll;
 }
