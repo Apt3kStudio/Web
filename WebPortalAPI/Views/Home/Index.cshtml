@@ -19,6 +19,14 @@
 <div class="row">
     <div class="col-sm-6" style="padding:2% 0% 8% 8%;">
         <p class="">@Html.Raw(Model.Body)</p>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/images/@(Model.AppleStore)" />
+            </div>
+            <div class="col-md-4">
+                <img src="~/images/@(Model.GooglePlay)" />
+            </div>
+        </div>
     </div>
     <div class="col-sm-6" style="padding:2% 15% 2% 15%">
         <img src="~/images/@(Model.WatchFace)" style="height: 337px;width: 464px;" />
