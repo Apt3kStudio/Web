@@ -48,6 +48,16 @@ namespace WebPortalAPI.Controllers
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
+        [HttpPost]
+        public IActionResult Newsletter(string Email)
+        {
+            if (!string.IsNullOrEmpty(Email) && !db.Newsletter_Subscriptions.Any(e => e.Email == Email))
+            {
+                db.Newsletter_Subscriptions.Add(new Newsletter_Subscription { Email = Email });
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
         public IActionResult Notification()
         {
             ViewData["Title"] = "";
