@@ -11,6 +11,7 @@ $(function () {
     });
     animateMenu(true);
     setDatatable(true);
+    wrapAdminusersDatatable(true);
 });
 
 function animateMenu(enable)
@@ -31,6 +32,14 @@ function setDatatable(enable)
     if (enable)
     {
         $("#adminusersTable").DataTable();
+    }
+}
+function wrapAdminusersDatatable(enable)
+{
+    if (enable)
+    {
+        var newDiv = "<div class='newDivAdminusersTable'></div>"
+        $(newDiv).insertAfter($("#adminusersTable").prev()).append($("#adminusersTable"));
     }
 }
 
