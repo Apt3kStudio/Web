@@ -44,13 +44,15 @@
     
     <div class="row">
         <div class="product-detail-red">
-            <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Email Adress" />
-            </div>
+            <form method="post" asp-action="Newsletter">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" name="Email" placeholder="Email Adress" />
+                </div>
 
-            <div class="col-md-12 pt10">
-                <input type="submit" class="btn btn-block btn-blue" value="Subscribe" />
-            </div>
+                <div class="col-md-12 pt10">
+                    <input type="submit" class="btn btn-block btn-blue" value="Subscribe" />
+                </div>
+            </form>
         </div>
     </div>
 </div>
