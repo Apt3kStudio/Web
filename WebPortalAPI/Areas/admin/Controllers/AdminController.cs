@@ -119,18 +119,15 @@ namespace WebPortalAPI.Areas.admin.Controllers
         }
 
         [Route("PushEvent")]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult PushEvent(Events model)
+        [HttpPost]        
+        public IActionResult PushEvent(string EventName, int DeviceID)
         {
-            if (!ModelState.IsValid)
-                return View(model);
-            PushNotification p = new PushNotification();
-            p.SendPushNotification(new PushNotification()
-            {
-                NotificationContent = model.EventName,
-                NotificationTitle = model.EventName
-            });
+
+            Events model = new Events();
+            FirebaseSetting fbs = new FirebaseSetting();
+            FirebaseSupportService fbss = new FirebaseSupportService(fbs,_mapper);
+            fbss.MaketheAPICall(model.data);
+            
             return View(model);
         }      
        

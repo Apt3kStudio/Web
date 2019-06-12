@@ -12,9 +12,9 @@ using WebPortalAPI.Data;
 namespace WebPortalAPI.Areas.Admin.Models
 {
     public class FirebaseSupportService
-    {       
+    {
         public string ApplicationID { get; set; }
-        public string  SenderID { get; set; }
+        public string SenderID { get; set; }
         public string DeviceID { get; set; }
         public string RequestType { get; set; }
         public string ContentType { get; set; }
@@ -26,40 +26,35 @@ namespace WebPortalAPI.Areas.Admin.Models
         WebRequest tRequest;
         Byte[] byteArray;
         private IMapper _mapper;
-      
+        private FirebaseSetting _firebaseSetting;
+
         public FirebaseSupportService(FirebaseSetting firebaseSetting, IMapper mapper)
         {
-            this._mapper = mapper;           
-            MaketheAPICall();
-            var data = new
-            {
-                to = DeviceID,
-                notification = new
-                {
-                    body = Body,
-                    title = Title
-                }
-            };
-            InitializeService(firebaseSetting, data);
+            this._mapper = mapper;
+            _firebaseSetting = firebaseSetting;
         }
-        private void InitializeService(FirebaseSetting firebaseSetting, object data)
+        private void InitializeService(object data)
         {
-            this._mapper.Map(firebaseSetting, this);
-            InitWebRequest(firebaseSetting, data);
+            this._mapper.Map(_firebaseSetting, this);
+            InitWebRequest(data);
         }
-
-        private void InitWebRequest(FirebaseSetting firebaseSetting, object data)
+        private void InitWebRequest(object Eventdata)
         {
+            var data = new {to = DeviceID, notification = Eventdata};
             var json = JsonConvert.SerializeObject(data);
             byteArray = Encoding.UTF8.GetBytes(json);
             tRequest.ContentLength = byteArray.Length;
             tRequest = WebRequest.Create(FCMSendUrl);
-            tRequest.Method = firebaseSetting.RequestType;
-            tRequest.ContentType = firebaseSetting.ContentType;
+            tRequest.Method = _firebaseSetting.RequestType;
+            tRequest.ContentType = _firebaseSetting.ContentType;
             tRequest.Headers.Add(string.Format("Authorization: key={0}", ApplicationID));
             tRequest.Headers.Add(string.Format("Sender: id={0}", SenderID));
         }
-        public bool MaketheAPICall() => Send();
+        public bool MaketheAPICall(object data) {
+                    InitializeService(data);
+             Send();
+            return true;
+        }
         private bool Send()
         {
             try

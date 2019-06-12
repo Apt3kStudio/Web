@@ -3,17 +3,24 @@
 
 // Write your JavaScript code.
 $(function () {   
-    $('#header,#body,#ProductDetail ').summernote({
-        height: 150,   //set editable area's height
-        codemirror: { // codemirror options
-            theme: 'monokai'
-        }
-    });
+    setUpSummerNote(true);
     animateMenu(true);
     setDatatable(true);
     wrapAdminusersDatatable(true);
 });
 
+function setUpSummerNote(enable)
+{
+    if (enable)
+    {
+        $('#header,#body,#ProductDetail ').summernote({
+            height: 150,   //set editable area's height
+            codemirror: { // codemirror options
+                theme: 'monokai'
+            }
+        });
+    }
+}
 function animateMenu(enable)
 {
     if (enable) {
@@ -26,7 +33,6 @@ function animateMenu(enable)
         });
     }
 }
-
 function setDatatable(enable)
 {
     if (enable)
@@ -42,7 +48,5 @@ function wrapAdminusersDatatable(enable)
         $(newDiv).insertAfter($("#adminusersTable").prev()).append($("#adminusersTable"));
     }
 }
-
-
 
 

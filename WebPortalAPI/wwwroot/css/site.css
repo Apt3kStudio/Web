@@ -11,7 +11,8 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color:white;
+    background-color: #68849b;
+    color: white;
 }
 
 /* Carousel */
