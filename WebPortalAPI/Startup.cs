@@ -18,6 +18,8 @@ using System.Text;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using AutoMapper;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 namespace WebPortalAPI
 {
@@ -106,7 +108,10 @@ namespace WebPortalAPI
             app.UseAuthentication();
 
             SeedDatabase.Initialize(app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
-          
+            FirebaseApp.Create(new AppOptions()
+            {
+                Credential = GoogleCredential.GetApplicationDefault(),
+            });
             app.UseMvc(routes =>
             {
                 #region admin

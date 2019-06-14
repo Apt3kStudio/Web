@@ -11,7 +11,7 @@ namespace WebPortalAPI.Areas.admin.Models
         internal object data;
 
         public string EventName { get; set; }
-        public string DeviceID { get; set; }
+        public int DeviceID { get; set; }
         public List<SelectListItem> PushEvents { set; get; }
 
         public Events()
@@ -21,9 +21,9 @@ namespace WebPortalAPI.Areas.admin.Models
             PushEvents.Add(new SelectListItem { Text = "Sound", Value = "Sound" });
             PushEvents.Add(new SelectListItem { Text = "Flashing", Value = "Flashing" });
         }
-        public object getData()
+        public void SetData()
         {
-           return new
+            data = new
             {
                 body = DeviceID,
                 title = EventName

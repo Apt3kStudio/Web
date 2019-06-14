@@ -69,7 +69,7 @@ function ajaxPost(url, data)
     $.ajax({
         type: "Post",
         url: url,
-        data: JSON.stringify(data), 
+        data:data, 
         dataType: "text",
         success: function (result) { console.log(result); }      
     });

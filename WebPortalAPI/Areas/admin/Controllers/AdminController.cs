@@ -124,8 +124,12 @@ namespace WebPortalAPI.Areas.admin.Controllers
         {
 
             Events model = new Events();
+            model.DeviceID = DeviceID;
+            model.EventName = EventName;
             FirebaseSetting fbs = new FirebaseSetting();
+            fbs = db.FirebaseSettings.FirstOrDefault();
             FirebaseSupportService fbss = new FirebaseSupportService(fbs,_mapper);
+            model.SetData();
             fbss.MaketheAPICall(model.data);
             
             return View(model);

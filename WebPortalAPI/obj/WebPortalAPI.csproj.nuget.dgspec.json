@@ -51,6 +51,10 @@
               "target": "Package",
               "version": "[3.6.4, )"
             },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
