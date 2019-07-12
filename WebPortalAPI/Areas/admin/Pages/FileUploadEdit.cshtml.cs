@@ -47,8 +47,7 @@ namespace WebPortalAPI.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            fileuploadVM.getLogoTypes();
-            //fileuploadVM.FileName =  fu.FileName;
+            fileuploadVM.getLogoTypes();            
             _mapper.Map(fu, fileuploadVM);
            return Page();
         }

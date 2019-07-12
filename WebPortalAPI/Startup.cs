@@ -53,10 +53,19 @@ namespace WebPortalAPI
             services.AddIdentity<ApplicationUser, ApplicationRole>()
                    .AddSignInManager<SignInManager<ApplicationUser>>()
                .AddEntityFrameworkStores<ApplicationDbContext>();
-             //.AddDefaultTokenProviders();
+            #region Password Policy
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = false;
+            });
             #endregion
-
-
+            //.AddDefaultTokenProviders();
+            #endregion
             #region  security key tag
             string securityKey = "super_long_security_key";
             #endregion

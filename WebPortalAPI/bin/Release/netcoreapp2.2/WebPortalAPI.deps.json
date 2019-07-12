@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "223f8175f471d8284b810c9f3379833cc8234273"
+    "signature": "98650cc4fabdc39c325657c165d7dab5c32d76b1"
   },
   "compilationOptions": {
     "defines": [
@@ -26,6 +26,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.1.0",
           "CKEditor": "3.6.4",
+          "FirebaseAdmin": "1.6.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -69,6 +70,71 @@
         }
       },
       "CKEditor/3.6.4": {},
+      "FirebaseAdmin/1.6.0": {
+        "dependencies": {
+          "Google.Apis.Auth": "1.35.1",
+          "NETStandard.Library": "2.0.3",
+          "System.Collections.Immutable": "1.5.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/FirebaseAdmin.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.5/FirebaseAdmin.dll": {}
+        }
+      },
+      "Google.Apis/1.35.1": {
+        "dependencies": {
+          "Google.Apis.Core": "1.35.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "assemblyVersion": "1.35.1.0",
+            "fileVersion": "1.35.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.35.1": {
+        "dependencies": {
+          "Google.Apis": "1.35.1",
+          "Google.Apis.Core": "1.35.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {
+            "assemblyVersion": "1.35.1.0",
+            "fileVersion": "1.35.1.0"
+          },
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.35.1.0",
+            "fileVersion": "1.35.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.35.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.35.1.0",
+            "fileVersion": "1.35.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -3597,6 +3663,34 @@
       "sha512": "sha512-roGF09wJmp7Zyyvq/bDzbLccKUfMumMpmgPav5U/naoVoDis1izPsSL8H/MEFG3hfFBC4HegSRwlYZG+PWHnaQ==",
       "path": "ckeditor/3.6.4",
       "hashPath": "ckeditor.3.6.4.nupkg.sha512"
+    },
+    "FirebaseAdmin/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kBs2CVQHNvrG7egjkxIxIcyfL3B2khFXJDXwjTN0oV18YgQbaoLKI0+2b9o6zOzrR1RB02cwDkqKGky87T3yqw==",
+      "path": "firebaseadmin/1.6.0",
+      "hashPath": "firebaseadmin.1.6.0.nupkg.sha512"
+    },
+    "Google.Apis/1.35.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZBWKDuj7qznEaNYHFRYcwbDfdDltqfeUrpVL8ijahy7KGG8DdHBY86uA2bpiKTAmgbOO7TKNkvaURAVJur98eQ==",
+      "path": "google.apis/1.35.1",
+      "hashPath": "google.apis.1.35.1.nupkg.sha512"
+    },
+    "Google.Apis.Auth/1.35.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GklaB+R3yiC13T/duEW10uqvugSr1zgPcn1P3O4hOPcMoS4Z/NvGYns2IoEywVKXuFg4kGH/VUCZ7xSUdcAV6g==",
+      "path": "google.apis.auth/1.35.1",
+      "hashPath": "google.apis.auth.1.35.1.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.35.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xVzrkplgHMOCqFQHIfy9HvJBKNLQaRV+orWFHjpUAtGZe0GghHdQKG5dzLNnYjLQXICBftlK5FWk9AoAotYbYw==",
+      "path": "google.apis.core/1.35.1",
+      "hashPath": "google.apis.core.1.35.1.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",

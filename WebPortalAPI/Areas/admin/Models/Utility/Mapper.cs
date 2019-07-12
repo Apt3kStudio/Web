@@ -19,6 +19,7 @@ namespace WebPortalAPI.Areas.Admin.Models.Utility
             CreateMap<LandingPage, Areas.admin.Models.LandingPageVM>().ReverseMap();
             CreateMap<LandingPage, WebPortalAPI.Models.LandingPageVM>().ReverseMap();
             CreateMap<Dashboard, DashboardVM>().ReverseMap();
+            CreateMap<DeviceModel, DeviceVM>().ReverseMap();
         }
     }
 }

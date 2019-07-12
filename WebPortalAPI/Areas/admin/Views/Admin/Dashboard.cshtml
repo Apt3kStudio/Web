@@ -17,8 +17,7 @@
             <table id="adminusersTable">
                 <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Email</td>
+                        <td>Email</td>                        
                         <td>Devices</td>
                     </tr>
                 </thead>
@@ -27,8 +26,7 @@
                         foreach (AdminUser adminUser in Model.AdminUsersList)
                         {
                             <tr class="user-tr-row">
-                                <td data-userID="@adminUser.Id">@adminUser.FirstName @adminUser.LastName </td>
-                                <td>@adminUser.EmailAddress</td>
+                                <td data-userID="@adminUser.Id">@adminUser.EmailAddress </td>                               
                                 <td>DevicesList</td>
                             </tr>
 

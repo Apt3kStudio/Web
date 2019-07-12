@@ -14,6 +14,7 @@ namespace WebPortalAPI.Models
         public string Password { get; set; }
         public string roleName { get; set; }
         public string FBToken { get; set; }
+        public string DeviceName { get; set; }
 
     }
 }

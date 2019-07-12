@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="col-sm-12">
-        @foreach (Device device in Model.Devices)
+        @foreach (DeviceVM device in Model.Devices)
         {
             <div>@device.Name</div>
             <div class="phone-controller-triggers">
@@ -42,7 +42,7 @@ function enableVibrateClickEvent(enable,url)
     {
         $(".vibClick").on("click", function () {
             debugger;
-            let data = constructJsonData("vibrate",$(this));
+            let data = constructJsonData("Vibration",$(this));
             ajaxPost(url, data);          
         });
     }
@@ -50,7 +50,7 @@ function enableVibrateClickEvent(enable,url)
 function enableAlarmClickEvent(enable,url) {
     if (enable) {
         $(".alarmClick").on("click", function () {
-            let data = constructJsonData("alarm", $(this));
+            let data = constructJsonData("Sound", $(this));
             ajaxPost(url, data);   
         });
     }
@@ -58,7 +58,7 @@ function enableAlarmClickEvent(enable,url) {
 function enableFlashClickEvent(enable,url) {
     if (enable) {
         $(".flashClick").on("click", function () {
-            let data = constructJsonData("flash", $(this));
+            let data = constructJsonData("Flash", $(this));
             ajaxPost(url, data);   
         });
     }
