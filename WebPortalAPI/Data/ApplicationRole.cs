@@ -12,6 +12,7 @@ namespace WebPortalAPI.Data
 
         public ApplicationRole(string roleName) : base(roleName) { }
 
+
         //public ApplicationRole(string roleName)
         //    : base(roleName)
         //{
@@ -22,6 +23,6 @@ namespace WebPortalAPI.Data
         //}
 
         //public string Description { get; set; }
-       // public DateTime CreatedDate { get; set; }
+        // public DateTime CreatedDate { get; set; }
     }
 }

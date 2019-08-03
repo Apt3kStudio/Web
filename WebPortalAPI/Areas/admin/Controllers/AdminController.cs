@@ -7,6 +7,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,16 +23,18 @@ namespace WebPortalAPI.Areas.admin.Controllers
     [Authorize]
     public class AdminController : Controller
     {
+        private UserManager<ApplicationUser> _userManager;
         private ApplicationDbContext db;
         private IHostingEnvironment _env;
         private IMapper _mapper;
         private Utils _utils;
-        public AdminController(IServiceProvider serviceProvider, IHostingEnvironment env, IMapper mapper )
+        public AdminController(IServiceProvider serviceProvider, IHostingEnvironment env, IMapper mapper, UserManager<ApplicationUser> userManager)
         {
             db = serviceProvider.GetRequiredService<ApplicationDbContext>();
             _env = env;
             _mapper = mapper;
             _utils = new Utils();
+            _userManager = userManager;
         }
       
         [Route("LandingPage")]    
@@ -83,26 +86,27 @@ namespace WebPortalAPI.Areas.admin.Controllers
         [Route("Dashboard")]
         public ActionResult Dashboard()
         {        
-            return View(new DashboardVM(db, _mapper, _env));
+            return View(new DashboardVM(db, _mapper, _env, _userManager, "Admin"));
         }
 
         [Route("Dashboard")]
         [HttpPost]
         public ActionResult Dashboard(DashboardVM myDashboard)
-        {
+        { 
             if (!ModelState.IsValid)
                 return View(myDashboard);
-            myDashboard.Config(db,_mapper,_env);
+            myDashboard.Config(db,_mapper,_env,_userManager,"Admin");
             myDashboard.loadAdminUsers();
-            if (myDashboard.doesItExist()){myDashboard.Update();}else{myDashboard.Inser();}         
+            if (myDashboard.doesItExist()){myDashboard.Update();}else{myDashboard.Insert();}         
             return View(myDashboard);
         }
         [Route("Devices")]
-        public ActionResult Devices(int userID)
+        public async Task<ActionResult> Devices(string userID)
         {
             AdminUser au = new AdminUser();
-            au.getDevices();
-            au.Devices = au.Devices.Where(d => d.UserId == userID).ToList();
+            var user = await _userManager.FindByIdAsync(userID);
+            au.getDevices(user.FBToken);
+            au.Devices = db.Devices.Where(d => d.UserId == userID).Select(d => _mapper.Map<DeviceVM>(d)).ToList();
             return PartialView("Templates/Devices", au);
         }
         [Route("RadarGraph")]
@@ -120,19 +124,26 @@ namespace WebPortalAPI.Areas.admin.Controllers
 
         [Route("PushEvent")]
         [HttpPost]        
-        public IActionResult PushEvent(string EventName, int DeviceID)
+        public async Task<IActionResult> PushEvent(string EventName, int DeviceID)
         {
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            Events evnt = new Events();
+            evnt.DeviceID = DeviceID;
+            evnt.EventName = EventName;
+            evnt.Initialize();
 
-            Events model = new Events();
-            model.DeviceID = DeviceID;
-            model.EventName = EventName;
+            AdminUser au = new AdminUser();           
+            au.getDevices(user.FBToken);
+            DeviceVM device = _mapper.Map<DeviceVM>(db.Devices.FirstOrDefault(d => d.Id == DeviceID));
+            device.SetEventToBeSend(evnt);
+
             FirebaseSetting fbs = new FirebaseSetting();
             fbs = db.FirebaseSettings.FirstOrDefault();
             FirebaseSupportService fbss = new FirebaseSupportService(fbs,_mapper);
-            model.SetData();
-            fbss.MaketheAPICall(model.data);
+           
+            fbss.MaketheAPICall(device);
             
-            return View(model);
+            return View(evnt);
         }      
        
         [Route("FirebaseSettings")]

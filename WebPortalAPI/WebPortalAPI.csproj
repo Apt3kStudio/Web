@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Admin\Views\obj\**" />
+    <Compile Remove="Data\Migrations\**" />
     <Compile Remove="wwwroot\css\testcss\**" />
+    <Content Remove="Areas\Admin\Views\obj\**" />
+    <Content Remove="Data\Migrations\**" />
     <Content Remove="wwwroot\css\testcss\**" />
+    <EmbeddedResource Remove="Areas\Admin\Views\obj\**" />
+    <EmbeddedResource Remove="Data\Migrations\**" />
     <EmbeddedResource Remove="wwwroot\css\testcss\**" />
+    <None Remove="Areas\Admin\Views\obj\**" />
+    <None Remove="Data\Migrations\**" />
     <None Remove="wwwroot\css\testcss\**" />
   </ItemGroup>
 
@@ -29,7 +37,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
-    <Folder Include="Data\Migrations\" />
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
 

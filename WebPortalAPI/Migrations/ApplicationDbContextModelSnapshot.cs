@@ -169,6 +169,8 @@ namespace WebPortalAPI.Data.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
 
+                    b.Property<string>("UserType");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -195,6 +197,46 @@ namespace WebPortalAPI.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Dashboards");
+                });
+
+            modelBuilder.Entity("WebPortalAPI.Data.DeviceModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("EventID");
+
+                    b.Property<string>("FCMToken");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventID");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Devices");
+                });
+
+            modelBuilder.Entity("WebPortalAPI.Data.EventModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("DeviceID");
+
+                    b.Property<string>("EventName");
+
+                    b.Property<string>("Option");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Events");
                 });
 
             modelBuilder.Entity("WebPortalAPI.Data.FileUpload", b =>
@@ -324,6 +366,18 @@ namespace WebPortalAPI.Data.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("WebPortalAPI.Data.DeviceModel", b =>
+                {
+                    b.HasOne("WebPortalAPI.Data.EventModel", "EventToBeSend")
+                        .WithMany("Devices")
+                        .HasForeignKey("EventID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebPortalAPI.Data.ApplicationUser", "AppUser")
+                        .WithMany("Devices")
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }
