@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.DependencyInjection;
 using WebPortalAPI.Data;
 using WebPortalAPI.Models;
 
@@ -15,11 +18,17 @@ namespace WebPortalAPI.Controllers
     
     public class HomeController : Controller
     {
+        private ApplicationDbContext db;
+        private IHostingEnvironment _env;
+        private IMapper _mapper;
         private UserManager<ApplicationUser> userManager;
         private RoleManager<ApplicationRole> roleManager;
-
-        public HomeController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager)
+       
+        public HomeController(RoleManager<ApplicationRole> roleManager, UserManager<ApplicationUser> userManager, IServiceProvider serviceProvider, IHostingEnvironment env, IMapper mapper)
         {
+            db = serviceProvider.GetRequiredService<ApplicationDbContext>();
+            _env = env;
+            _mapper = mapper;
             this.roleManager = roleManager;
             this.userManager = userManager;
         }
@@ -27,8 +36,8 @@ namespace WebPortalAPI.Controllers
         public IActionResult Index()
         {
             ViewData["Title"] = "";
-            PushNotification pn = new PushNotification();
-            return View(pn);
+            LandingPageVM h = new LandingPageVM(db, _mapper, _env);
+            return View(h);
         }
         [HttpPost]
         public IActionResult Index(PushNotification model)
@@ -38,6 +47,16 @@ namespace WebPortalAPI.Controllers
                 
             model.SendPushNotification(model);
             return View(new PushNotification());
+        }
+        [HttpPost]
+        public IActionResult Newsletter(string Email)
+        {
+            if (!string.IsNullOrEmpty(Email) && !db.Newsletter_Subscriptions.Any(e => e.Email == Email))
+            {
+                db.Newsletter_Subscriptions.Add(new Newsletter_Subscription { Email = Email });
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index");
         }
         public IActionResult Notification()
         {
@@ -53,6 +72,25 @@ namespace WebPortalAPI.Controllers
 
             model.SendPushNotification(model);
             return View(new PushNotification());
+        }
+        [HttpGet]
+        public IActionResult PushEvent()
+        {
+            ViewData["Title"] = "";
+            Events event_model = new Events();
+            event_model.LoadPushEvents();
+            return View(event_model);
+        }
+        [HttpPost]
+        public IActionResult PushEvent(Events event_model)
+        {
+            if (!ModelState.IsValid)
+            return View(event_model);
+
+            event_model.SendEvent();
+            event_model.LoadPushEvents();
+
+            return View(event_model);
         }
         [Authorize]
         public IActionResult UsersAcount()

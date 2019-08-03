@@ -1,0 +1,37 @@
+﻿@page
+@model WebPortalAPI.Areas.Admin.Controllers.EditModel
+
+<h4>FileUpload</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="fileuploadVM.id" />
+            <div class="form-group">
+                <input asp-for="files" type="file" class="form-control" multiple />
+            </div>
+            <div class="form-group">
+                <label asp-for="fileuploadVM.fileSize" class="control-label"></label>
+                @Model.fileuploadVM.fileSize
+                <span asp-validation-for="fileuploadVM.fileSize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select asp-for="fileuploadVM.Type" class="form-control" asp-items="Model.fileuploadVM.logosTypes">
+                    <option>Select Logo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./FileUploadIndex">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

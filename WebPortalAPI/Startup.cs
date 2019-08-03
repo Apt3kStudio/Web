@@ -17,6 +17,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using AutoMapper;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 namespace WebPortalAPI
 {
@@ -24,7 +27,7 @@ namespace WebPortalAPI
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Configuration = configuration;          
         }
 
         public IConfiguration Configuration { get; }
@@ -54,24 +57,16 @@ namespace WebPortalAPI
             #endregion
 
 
-            #region  security key
+            #region  security key tag
             string securityKey = "super_long_security_key";
             #endregion
 
             #region Symetric security key
             var symetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
             #endregion
-            services.AddAuthentication(
-                //options => //Not working: Figure out why
-                //{
-                //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                //    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                //}
-                ).AddCookie(cfg => cfg.SlidingExpiration = true)
+            services.AddAuthentication().AddCookie(cfg => cfg.SlidingExpiration = true)
             .AddJwtBearer(options =>
                 {
-
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         #region what to validate
@@ -85,14 +80,9 @@ namespace WebPortalAPI
                         #endregion
                     };
                 });
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-
-
-
+            services.AddAutoMapper(typeof(Startup));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(  IApplicationBuilder app,
                                 IHostingEnvironment env,
@@ -110,7 +100,7 @@ namespace WebPortalAPI
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+           
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             //app.UseCookiePolicy();
@@ -118,11 +108,17 @@ namespace WebPortalAPI
             app.UseAuthentication();
 
             SeedDatabase.Initialize(app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
-
+            FirebaseApp.Create(new AppOptions()
+            {
+                Credential = GoogleCredential.GetApplicationDefault(),
+            });
             app.UseMvc(routes =>
             {
+                #region admin
+                routes.MapRoute("areaRoute", "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+                #endregion
                 routes.MapRoute(
-                    name: "default",
+                    name: "default",    
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }

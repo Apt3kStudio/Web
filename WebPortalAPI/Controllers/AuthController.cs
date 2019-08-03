@@ -31,6 +31,10 @@ namespace WebPortalAPI.Controllers
 
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
             {
+                if (!string.IsNullOrEmpty(model?.FBToken ?? ""))
+                {
+                    await UpdateUser(model, user);
+                }
 
                 #region  security key 
                 string securityKey = "super_long_security_key";
@@ -69,13 +73,20 @@ namespace WebPortalAPI.Controllers
 
             return Unauthorized();
         }
+
+        private async Task UpdateUser(User model, ApplicationUser user)
+        {
+            user.FBToken = model.FBToken;
+            await userManager.UpdateAsync(user);
+        }
+
         [HttpPost]
         [Route("registration")]
         public async Task<IActionResult> Register([FromBody] User model)
         {
 
 
-            var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FBToken = model.FBToken};
             var result = await userManager.CreateAsync(user, model.Password);
 
 

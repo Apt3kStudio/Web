@@ -101,6 +101,14 @@ namespace WebPortalAPI.Models
         {
             return roleManager.Roles.Select(c => new SelectListItem { Value = c.Name, Text = c.Name}).ToList();
         }
+        public List<SelectListItem> getTriggerForDropDownList()
+        {
+            List<SelectListItem> listItemTrigger = new List<SelectListItem>();
+            listItemTrigger.Add(new SelectListItem { Value = "vibrate", Text = "vibrate" });
+            listItemTrigger.Add(new SelectListItem { Value = "Sound", Text = "Sound" });
+            listItemTrigger.Add(new SelectListItem { Value = "FlashLight", Text = "FlashLight" });
+            return listItemTrigger;
+        }
         public List<string> getAppUsers()
         {
             return  userManager.Users.Select(c=> c.Email).ToList();

@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "defaultProvider": "filesystem",
+  "libraries": [
+    {
+      "library": "wwwroot/css/site.css",
+      "destination": "wwwroot/css/",
+      "files": [
+        "site.min.css"
+      ]
+    },
+    {
+      "library": "wwwroot/js/site.js",
+      "destination": "wwwroot/js/",
+      "files": [
+        "site.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "summernote@0.8.12",
+      "destination": "wwwroot/js/summernote/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "font-awesome@5.8.2",
+      "destination": "wwwroot/css/font-awesome/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "codemirror@5.47.0",
+      "destination": "wwwroot/lib/codemirror/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "animate.css@3.7.2",
+      "destination": "wwwroot/lib/animate.css/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables@1.10.19",
+      "destination": "wwwroot/lib/datatables/"
+    }
+  ,
+{
+  "provider": "cdnjs",
+  "library": "Chart.js@2.8.0",
+  "destination": "wwwroot/lib/Chart.js/"
+}
+]
+}

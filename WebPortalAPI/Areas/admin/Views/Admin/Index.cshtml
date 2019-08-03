@@ -1,0 +1,92 @@
+﻿@model WebPortalAPI.Areas.admin.Models.LandingPageVM
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "LandingPage";
+}
+
+<h2>LandingPage-</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Index">
+            <div class="form-group">
+                <label asp-for="logo" class="control-label"></label>
+                <select asp-for="logo" class="form-control" asp-items="Model.logos">
+                    <option>Select Logo</option>
+                </select>
+                <span asp-validation-for="logo" class="text-danger"></span>
+            </div>
+        <br/>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @*<div class="form-group">
+            <label asp-for="logo" class="control-label"></label>
+            <textarea asp-for="logo" class="form-control" id="logo"></textarea>
+            <span asp-validation-for="logo" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <label asp-for="Header" class="control-label"></label>
+                <textarea asp-for="Header" class="form-control box-Shadow-light" id="header"></textarea>
+                <span asp-validation-for="Header" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+               
+                    <label asp-for="Body" class="control-label"></label>
+                    <textarea asp-for="Body" class="form-control box-Shadow-ligh" id="body"></textarea>
+                    <span asp-validation-for="Body" class="text-danger"></span>               
+            </div>
+
+            <div class="form-group">
+                <label asp-for="WatchFace" class="control-label"></label>
+                <select asp-for="WatchFace" class="form-control" asp-items="Model.WatchFaces">
+                    <option>Select Watchface Logo</option>
+                </select>
+                <span asp-validation-for="WatchFace" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="AppleStore" class="control-label"></label>
+                <select asp-for="AppleStore" class="form-control" asp-items="Model.AppleStores">
+                    <option>Select Apple Store Logo</option>
+                </select>
+                <span asp-validation-for="AppleStore" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="GooglePlay" class="control-label"></label>
+                <select asp-for="GooglePlay" class="form-control" asp-items="Model.GooglePlays">
+                    <option>Select Google Play Logo</option>
+                </select>
+                <span asp-validation-for="GooglePlay" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProductDetail" class="control-label"></label>
+                <textarea asp-for="ProductDetail" class="form-control box-Shadow-ligh" id="ProductDetail"></textarea>
+                <span asp-validation-for="ProductDetail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save Changes" class="btn btn-primary" />
+            </div>
+        </form>
+       
+    </div>
+</div>
+
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script src="~/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+
+
+</script>
+@functions{ 
+    Utils u = new Utils();
+
+
+}

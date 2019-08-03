@@ -1,5 +1,57 @@
-﻿
-@{ 
+﻿    @model LandingPageVM
+@{
     ViewData["Title"] = "Send Notification";
 }
 
+@*@if (User.IsInRole("admin"))
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <a asp-area="Admin" asp-controller="Admin" asp-action="Index">Edit Page Content</a>
+        </div>
+    </div>
+}*@
+<div class="row" style="background-image:url('/images/Background3@2x.png');background-size: auto;height:495px;height: 495px;background-size: 100% 281%;background-repeat: no-repeat;">
+    <div class="top-section-logo col-sm-12 outline"><img src="~/images/@(Model.logo)" /> </div>
+    <div class="top-section-title col-sm-12 outline">@Html.Raw(Model.Header)</div>
+    <div class="col-sm-12 form-inline feature-icon-container outline"><img src="~/images/Mask Group 1.png" /> <img src="~/images/Mask Group 3.png" /> <img src="~/images/Mask Group 2.png" /></div>
+</div>
+<div class="row">
+    <div class="col-sm-6" style="padding:2% 0% 8% 8%;">
+        <p class="">@Html.Raw(Model.Body)</p>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/images/@(Model.AppleStore)" />
+            </div>
+            <div class="col-md-4">
+                <img src="~/images/@(Model.GooglePlay)" />
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6" style="padding:2% 15% 2% 15%">
+        <img src="~/images/@(Model.WatchFace)" style="height: 337px;width: 464px;" />
+    </div>
+</div>
+<div class="row">
+    
+</div>
+<div class="row" style="background-image:url('/images/Background3@2x.png');background-size: auto;height:495px;height: 495px;background-size: 100% 100%;background-repeat: no-repeat;">
+    <div class="row">
+        <div class="col-sm-12">
+            <center><p class="product-details">@Html.Raw(Model.ProductDetail)</p></center>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="product-detail-red">            
+            <form method="post" asp-action="Newsletter">
+               <div class="col-md-12 newsLetterEmail">
+                    <input type="text" class="form-control" name="Email" placeholder="Email Adress" />
+                </div>
+                <div class="col-md-12 pt10">
+                    <input type="submit" class="btn btn-block btn-blue" value="Subscribe" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

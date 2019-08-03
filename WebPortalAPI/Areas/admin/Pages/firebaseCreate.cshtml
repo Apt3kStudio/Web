@@ -1,0 +1,63 @@
+﻿@page "firebaseDelete"
+@model WebPortalAPI.Areas.Admin.Pages.CreateModel
+
+<h4>FirebaseSetting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="firebasesettingvm.ProfileName" class="control-label"></label>
+                <input asp-for="firebasesettingvm.ProfileName" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.ProfileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firebasesettingvm.ApplicationID" class="control-label"></label>
+                <input asp-for="firebasesettingvm.ApplicationID" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.ApplicationID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firebasesettingvm.SenderID" class="control-label"></label>
+                <input asp-for="firebasesettingvm.SenderID" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.SenderID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firebasesettingvm.DeviceID" class="control-label"></label>
+                <input asp-for="firebasesettingvm.DeviceID" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.DeviceID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firebasesettingvm.RequestType" class="control-label"></label>
+                <input asp-for="firebasesettingvm.RequestType" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.RequestType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firebasesettingvm.ContentType" class="control-label"></label>
+                <input asp-for="firebasesettingvm.ContentType" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.ContentType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firebasesettingvm.FCMSendUrl" class="control-label"></label>
+                <input asp-for="firebasesettingvm.FCMSendUrl" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.FCMSendUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firebasesettingvm.file" class="control-label"></label>
+                <input asp-for="firebasesettingvm.file" type="file" class="form-control" />
+                <span asp-validation-for="firebasesettingvm.file" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./firebaseIndex">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
