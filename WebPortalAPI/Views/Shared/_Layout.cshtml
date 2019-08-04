@@ -21,7 +21,7 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#001021; color:white; border:none;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,7 +37,7 @@
 
                     @if (User.IsInRole("admin"))
                     {
-                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li ><a  asp-area="" asp-controller="Home" asp-action="Index" >Home</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                         <li><a asp-area="Admin" asp-controller="Admin" asp-action="Index">Edit Page Content</a></li>
