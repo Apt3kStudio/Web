@@ -209,8 +209,6 @@ namespace WebPortalAPI.Data.Migrations
 
                     b.Property<string>("FCMToken");
 
-                    b.Property<string>("Model");
-
                     b.Property<string>("Name");
 
                     b.Property<string>("UserId");

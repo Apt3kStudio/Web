@@ -13,7 +13,6 @@ namespace WebPortalAPI.Data
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Model { get; set; }
 
         public string UserId { get; set; }
         [ForeignKey("UserId")]
