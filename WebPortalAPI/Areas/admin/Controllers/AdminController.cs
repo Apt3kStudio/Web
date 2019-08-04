@@ -89,9 +89,6 @@ namespace WebPortalAPI.Areas.admin.Controllers
             return View(new DashboardVM(db, _mapper, _env, _userManager, "Admin"));
         }
 
-
-
-
         [Route("Dashboard")]
         [HttpPost]
         public ActionResult Dashboard(DashboardVM myDashboard)
