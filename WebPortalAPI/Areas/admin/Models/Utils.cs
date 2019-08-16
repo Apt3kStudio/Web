@@ -30,7 +30,8 @@ namespace WebPortalAPI.Areas.Admin.Models
             Docx = 6,
             AppleStore = 7,
             GooglePlay = 8,
-            WatchFace = 9
+            WatchFace = 9,
+            Gallery = 9
         }
 
         

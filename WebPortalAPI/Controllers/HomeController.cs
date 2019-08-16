@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.DependencyInjection;
+using WebPortalAPI.Areas.Admin.Models;
 using WebPortalAPI.Data;
 using WebPortalAPI.Models;
 
@@ -48,6 +49,13 @@ namespace WebPortalAPI.Controllers
             model.SendPushNotification(model);
             return View(new PushNotification());
         }
+        public IActionResult Gallery()
+        {
+            List<Gallery> gallery = new List<Gallery>();
+            gallery = db.FileUploads.Where(c => c.Type == (int)Utils.FileType.Gallery).Select(c => new Gallery { imageurl = c.FileName }).ToList();
+            return View(gallery);
+        }
+
         [HttpPost]
         public IActionResult Newsletter(string Email)
         {
