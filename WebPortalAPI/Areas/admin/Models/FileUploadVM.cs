@@ -57,7 +57,7 @@ namespace WebPortalAPI.Areas.Admin.Models
             selecItems.Add(new SelectListItem("AppleStore", ((int)FileType.AppleStore).ToString()));
             selecItems.Add(new SelectListItem("GooglePlay", ((int)FileType.GooglePlay).ToString()));
             selecItems.Add(new SelectListItem("WatchFace", ((int)FileType.WatchFace).ToString()));
-            selecItems.Add(new SelectListItem("Gallery", ((int)FileType.WatchFace).ToString()));
+            selecItems.Add(new SelectListItem("Gallery", ((int)FileType.Gallery).ToString()));
             logosTypes = selecItems;
 
         }
