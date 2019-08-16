@@ -1,0 +1,12 @@
+﻿@model List<Gallery>
+@{
+    ViewData["Title"] = "Send Notification";
+}
+<div class="row">
+    @foreach(Gallery item in @Model)
+    {
+        <div class="col-sm-6">
+            <img src="~/images/@(item.imageurl)" style="height: 337px;width: 464px;" />
+        </div>
+    }
+</div>
