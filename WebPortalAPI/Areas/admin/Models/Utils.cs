@@ -31,7 +31,7 @@ namespace WebPortalAPI.Areas.Admin.Models
             AppleStore = 7,
             GooglePlay = 8,
             WatchFace = 9,
-            Gallery = 9
+            Gallery = 10
         }
 
         
